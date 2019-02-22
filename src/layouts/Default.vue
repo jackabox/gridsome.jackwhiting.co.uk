@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="layout bg-yellow">
     <header class="header">
       <g-link class="heading-link" :to="{ name: 'home' }">
         <component :is="titleTag" class="heading">{{ config.siteName }}</component>
@@ -16,18 +16,18 @@
 </template>
 
 <script>
-import config from "~/.temp/config.js";
+import config from '~/.temp/config.js'
 
 export default {
   computed: {
     titleTag() {
-      return this.$route.name === "home" ? "h1" : "h6";
+      return this.$route.name === 'home' ? 'h1' : 'h6'
     },
     config() {
-      return config;
+      return config
     }
   }
-};
+}
 </script>
 
 
@@ -48,7 +48,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Mali", cursive;
+  font-family: 'Mali', cursive;
 }
 
 h1 {
@@ -60,7 +60,7 @@ h6 {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   font-size: 16px;
   padding: 0;
@@ -85,7 +85,7 @@ body {
 
 .heading {
   margin-bottom: 20px;
-  font-family: "Mali", cursive;
+  font-family: 'Mali', cursive;
   font-weight: bold;
 }
 </style>

@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: "Jack",
-  titleTemplate: `%s - Gridsome`,
+  titleTemplate: `%s - Jack`,
 
   plugins: [
     {

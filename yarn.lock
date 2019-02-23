@@ -611,6 +611,13 @@
     semver "^5.6.0"
     sort-package-json "^1.15.0"
 
+"@gridsome/plugin-google-analytics@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/plugin-google-analytics/-/plugin-google-analytics-0.1.0.tgz#f2fdffdb05dd2928ca85c4a0d64c7e497a36ee49"
+  integrity sha512-IUuIj1z0BMtNa4NPRyBP3rYGyww+RWypsHTJ7WDdIj/BuH1x7BR9cDn7kskfG5azUi1LV0lJX329Te077oG07A==
+  dependencies:
+    vue-analytics "^5.16.1"
+
 "@gridsome/source-filesystem@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.3.0.tgz#c659440d014a9337e7db3de7109b6ce11e9ac74a"
@@ -7355,6 +7362,11 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vue-analytics@^5.16.1:
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.2.tgz#37724aeec71bb830b1cf2d52a969cf190ef120c1"
+  integrity sha512-5JKGnVF33VHlXFREzht9z3Z11N4IA8vXNnpvYeAf72rEUyAuuU9Q9kX34bULW2CxMrahr8m06IB8+91GX0Ruag==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"

@@ -28,6 +28,11 @@
   }
 </page-query>
 
+<script>
+export default {}
+</script>
+
+
 <style scoped>
 .home >>> .heading {
   margin-bottom: 70px;

@@ -1,11 +1,11 @@
 <template>
-  <div class="layout bg-yellow">
+  <div class="layout">
     <header class="header">
       <g-link class="heading-link" :to="{ name: 'home' }">
         <component :is="titleTag" class="heading">{{ config.siteName }}</component>
       </g-link>
 
-      <nav style="margin-bottom: 30px">
+      <nav class="mb-6">
         <g-link :to="{ name: 'home' }" style="margin-right: 20px;">Home</g-link>
         <g-link :to="{ name: 'about' }" style="margin-right: 20px;">About</g-link>
       </nav>
@@ -42,15 +42,6 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Mali', cursive;
-}
-
 h1 {
   font-size: 48px;
 }
@@ -60,7 +51,6 @@ h6 {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
   margin: 0;
   font-size: 16px;
   padding: 0;

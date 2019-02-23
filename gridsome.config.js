@@ -16,13 +16,13 @@ module.exports = {
         typeName: 'BlogPost',
         route: '/:slug'
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-86105963-1'
+      }
     }
-    // {
-    //   use: '@gridsome/plugin-google-analytics',
-    //   options: {
-    //     id: 'UA-86105963-1'
-    //   }
-    // }
   ],
 
   chainWebpack: config => {

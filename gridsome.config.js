@@ -16,6 +16,12 @@ module.exports = {
         typeName: 'BlogPost',
         route: '/:slug'
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-86105963-1'
+      }
     }
   ],
 
@@ -31,6 +37,12 @@ module.exports = {
             require('tailwindcss')('./tailwind.js')
           ]
         )
+
+        if (process.env.NODE_ENV === 'production') {
+          options.plugins.push(
+            ...[require('@fullhuman/postcss-purgecss')('./purgecss.config.js')]
+          )
+        }
 
         return options
       })

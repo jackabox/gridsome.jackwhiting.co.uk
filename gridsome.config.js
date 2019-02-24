@@ -14,8 +14,14 @@ module.exports = {
       options: {
         path: 'blog/*.md',
         typeName: 'BlogPost',
-        route: '/:slug'
-      }
+        route: '/:slug',
+        remark: {
+          plugins: [
+            '@gridsome/remark-prismjs'
+          ]
+        }
+      },
+
     }
     // {
     //   use: '@gridsome/plugin-google-analytics',
@@ -24,6 +30,14 @@ module.exports = {
     //   }
     // }
   ],
+
+  transformers: {
+    remark: {
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
 
   chainWebpack: config => {
     config.module

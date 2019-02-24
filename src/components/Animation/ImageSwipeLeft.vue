@@ -1,7 +1,7 @@
 <template>
   <div class="grid__item relative overflow-hidden">
     <div class="grid__link opacity-0" ref="imageEffect">
-      <g-image src="~/assets/img/portrait.jpg" :width="width" class="grid__img"/>
+      <slot/>
     </div>
 
     <div class="grid__reveal bg-black" ref="imageEffectReveal">&nbsp;</div>

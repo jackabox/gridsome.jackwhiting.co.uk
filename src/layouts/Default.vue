@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="w-12/12">
     <header class="header">
       <g-link class="heading-link" :to="{ name: 'home' }">
         <component :is="titleTag" class="heading">{{ config.siteName }}</component>
@@ -11,7 +11,9 @@
       </nav>
     </header>
 
-    <slot/>
+    <div class="container">
+      <slot/>
+    </div>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 let colors = {
   transparent: 'transparent',
 
-  black: '#00000',
+  black: '#1C1B1B',
   white: '#ffffff',
 
   'yellow-darkest': '#493612',

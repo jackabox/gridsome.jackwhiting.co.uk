@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import '~/assets/css/main.css'
 
-export default function(Vue, { router, head }) {
+export default function (Vue, { router, head }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
@@ -25,6 +25,6 @@ export default function(Vue, { router, head }) {
     /*
      ** We tell Google Analytics to add a `pageview`
      */
-    ga('set', 'page', to.fullPath)
+    // ga('set', 'page', to.fullPath)
   })
 }

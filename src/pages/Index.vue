@@ -5,7 +5,9 @@
         <router-link :to="node.path">
           <h2 v-html="node.title"/>
         </router-link>
+
         <span v-html="node.date"/>
+
         <div v-html="node.description"/>
       </li>
     </ul>

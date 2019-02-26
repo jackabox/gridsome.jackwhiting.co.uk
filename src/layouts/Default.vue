@@ -1,6 +1,6 @@
 <template>
-  <div class="w-12/12">
-    <header class="fixed pin-x py-2 bg-white">
+  <div class="w-12/12 flex flex-col">
+    <header class="fixed pin-x py-4 bg-white">
       <div class="container flex items-center justify-between">
         <g-link class="heading-link" :to="{ name: 'home' }">
           <h1
@@ -18,9 +18,15 @@
       </div>
     </header>
 
-    <div>
+    <div class="h-full">
       <slot/>
     </div>
+
+    <footer class="container">
+      <p
+        class="uppercase text-xs mt-20 mb-10 tracking-wide text-grey"
+      >&copy; Jack 2019 (and forever)</p>
+    </footer>
   </div>
 </template>
 

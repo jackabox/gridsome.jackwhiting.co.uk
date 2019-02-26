@@ -36,9 +36,3 @@ export default {
   }
 </page-query>
 
-<style lang="postcss" scoped>
-.date {
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-</style>

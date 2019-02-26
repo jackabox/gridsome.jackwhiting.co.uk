@@ -1,8 +1,11 @@
 <template>
   <Layout>
-    <div class="container">
+    <div class="container mt-0 pt-40">
       <div class="flex flex-wrap items-center row">
         <div class="w-6/12 column">
+          <p>
+            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, velit.</b>
+          </p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>

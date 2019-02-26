@@ -1,5 +1,5 @@
 <template>
-  <Layout class="home">
+  <Layout>
     <div class="bg-pink-lighter pt-40 pb-10 mb-20">
       <div class="container">
         <h1>Posts</h1>
@@ -43,13 +43,3 @@
     }
   }
 </page-query>
-
-<script>
-export default {}
-</script>
-
-<style lang="postcss">
-/* li:nth-child(even) {
-  background: #f8f0f0;
-} */
-</style>

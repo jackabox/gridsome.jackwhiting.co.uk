@@ -53,7 +53,8 @@ export default {
           value: 1,
           duration: 1,
           easing: 'linear'
-        }
+        },
+        scale: [1.1, 1]
       }
     },
 

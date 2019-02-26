@@ -2,35 +2,15 @@
 
 @import 'tailwindcss/components';
 
-@import './prism';
+@import 'prism';
+
+@import 'grid';
 
 @import 'tailwindcss/utilities';
-
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: config('screens.lg');
-}
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-.column {
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 code[class*='language-'],
 pre[class*='language-'] {
   margin: 40px 0;
-  /* width: calc(
-    config('screens.lg') + ((config('screens.md') - config('screens.lg')) / 2)
-  );
-  transform: translateX(
-    calc((config('screens.md') - config('screens.lg')) / 2)
-  ); */
 }
 
 h1 {

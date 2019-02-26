@@ -36,7 +36,7 @@ module.exports = {
 
   chainWebpack: config => {
     config.module
-      .rule('postcss') // or sass, scss, less, postcss, stylus
+      .rule('css') // or sass, scss, less, postcss, stylus
       .oneOf('normal') // or module
       .use('postcss-loader')
       .tap(options => {

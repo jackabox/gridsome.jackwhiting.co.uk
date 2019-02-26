@@ -8,7 +8,7 @@
 
       <div class="w-6/12">
         <image-swipe-left>
-          <g-image src="~/assets/img/portrait.jpg" width="900" class="grid__img"/>
+          <g-image src="~/assets/img/portrait.jpg" width="500" class="grid__img"/>
         </image-swipe-left>
       </div>
     </div>

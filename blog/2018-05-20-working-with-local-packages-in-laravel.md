@@ -24,7 +24,7 @@ An example of this would be
 packages/jackabox/admin
 ```
 
-# Create the symbolic link
+## Create the symbolic link
 
 I store all the packages I write in a separate directory on my computer but I also often work with other developers to implement and test their packages. To keep a consistent workflow, I often clone and keep all of the packages into their own directory, away from all the business of the main Laravel package.
 
@@ -39,7 +39,7 @@ ln -s ../packages/admin packages/namespace/admin
 
 Perfect, now we just need to get composer to read the files.
 
-# Setting Up Composer
+## Setting Up Composer
 
 To get composer to read a local package, we have to manually add the reference to the repositories section of the JSON. This would look something along the lines of the following:
 

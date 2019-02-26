@@ -16,12 +16,9 @@ module.exports = {
         typeName: 'BlogPost',
         route: '/:slug',
         remark: {
-          plugins: [
-            '@gridsome/remark-prismjs'
-          ]
+          plugins: ['@gridsome/remark-prismjs']
         }
-      },
-
+      }
     }
     // {
     //   use: '@gridsome/plugin-google-analytics',
@@ -33,15 +30,13 @@ module.exports = {
 
   transformers: {
     remark: {
-      plugins: [
-        '@gridsome/remark-prismjs'
-      ]
+      plugins: ['@gridsome/remark-prismjs']
     }
   },
 
   chainWebpack: config => {
     config.module
-      .rule('css') // or sass, scss, less, postcss, stylus
+      .rule('postcss') // or sass, scss, less, postcss, stylus
       .oneOf('normal') // or module
       .use('postcss-loader')
       .tap(options => {

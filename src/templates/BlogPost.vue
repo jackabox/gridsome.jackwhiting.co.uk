@@ -1,9 +1,12 @@
 <template>
   <Layout>
-    <div class="article">
+    <div>
       <h1>{{ $page.blogPost.title }}</h1>
-      <span>{{ $page.blogPost.date }}</span>
-      <div class="content" v-html="$page.blogPost.content"/>
+      <div class="mt-3 mb-20 text-md tracking-wide uppercase">{{ $page.blogPost.date }}</div>
+
+      <article class="article">
+        <div class="content" v-html="$page.blogPost.content"/>
+      </article>
     </div>
   </Layout>
 </template>
@@ -28,3 +31,10 @@ export default {
     }
   }
 </page-query>
+
+<style lang="postcss" scoped>
+.date {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+</style>

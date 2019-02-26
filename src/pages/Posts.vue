@@ -1,10 +1,6 @@
 <template>
   <Layout>
-    <div class="bg-pink-lighter pt-40 pb-10 mb-20">
-      <div class="container">
-        <h1>Posts</h1>
-      </div>
-    </div>
+    <page-header title="Posts"/>
 
     <ul class="list-reset">
       <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id" class="py-10">
@@ -43,3 +39,19 @@
     }
   }
 </page-query>
+
+<script>
+import PageHeader from '~/components/PageHeader'
+
+export default {
+  components: {
+    PageHeader
+  },
+
+  metaInfo() {
+    return {
+      title: 'Posts'
+    }
+  }
+}
+</script>

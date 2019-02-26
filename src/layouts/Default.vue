@@ -13,7 +13,7 @@
           <g-link
             :to="{ name: 'posts' }"
             class="ml-4 tracking-wide text-base text-grey-darker"
-          >About</g-link>
+          >Posts</g-link>
         </nav>
       </div>
     </header>

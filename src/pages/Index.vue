@@ -2,18 +2,18 @@
   <Layout>
     <div class="container mt-0 pt-40">
       <div class="flex flex-wrap items-center row">
-        <div class="w-6/12 column">
+        <div class="w-full md:w-6/12 column">
+          <h2 class="mb-4">Hey, I'm Jack</h2>
           <p>
-            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, velit.</b>
+            <b class="font-semibold">PHP &amp; JavaScript Developer located in Nottingham, UK.</b>
           </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
         </div>
 
-        <div class="w-6/12 column">
+        <div class="w-full md:w-6/12 mt-5 column">
           <image-swipe-left>
             <g-image src="~/assets/img/portrait.jpg" width="500" class="grid__img"/>
           </image-swipe-left>

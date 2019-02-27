@@ -1,6 +1,11 @@
 [build]
   publish = "dist"
   command = "gridsome build"
+  
+[[redirects]]
+  from = "/posts/2018/just-stop"
+  to = "/posts"
+  status = 301
 
 [[redirects]]
   from = "/posts/2018/*"
@@ -17,7 +22,3 @@
   to = "/posts/:splat"
   status = 301
 
-[[redirects]]
-  from = "/posts/2018/just-stop"
-  to = "/posts"
-  status = 301

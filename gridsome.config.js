@@ -27,13 +27,13 @@ module.exports = {
         typeName: 'Work',
         route: '/works/:slug'
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-86105963-1'
+      }
     }
-    // {
-    //   use: '@gridsome/plugin-google-analytics',
-    //   options: {
-    //     id: 'UA-86105963-1'
-    //   }
-    // }
   ],
 
   transformers: {

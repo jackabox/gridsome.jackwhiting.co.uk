@@ -3,8 +3,8 @@
     <page-header title="Posts"/>
 
     <ul class="list-reset">
-      <li v-for="{ node } in $page.allPost.edges" :key="node._id" class="py-10">
-        <div class="container">
+      <li v-for="({node}, index) in $page.allPost.edges" :key="node._id" class="py-10">
+        <slide-in :reverse="true" :delay="200 * parseInt(index)" class="container">
           <router-link :to="node.path">
             <h2 v-html="node.title"/>
           </router-link>
@@ -18,7 +18,7 @@
               class="border border-2 border-pink-lighter inline-flex pb-1 uppercase text-sm text-grey-darker hover:text-black hover:bg-pink-lighter px-2 py-1 tracking-wide"
             >Read More</span>
           </router-link>
-        </div>
+        </slide-in>
       </li>
     </ul>
   </Layout>
@@ -42,10 +42,16 @@
 
 <script>
 import PageHeader from '~/components/PageHeader'
+import SlideIn from '~/components/Animation/SlideIn'
 
 export default {
   components: {
-    PageHeader
+    PageHeader,
+    SlideIn
+  },
+
+  mounted() {
+    console.table(this.$page.allPost.edges)
   },
 
   metaInfo() {

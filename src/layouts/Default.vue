@@ -1,6 +1,6 @@
 <template>
   <div class="w-12/12 flex flex-col">
-    <header class="fixed pin-x py-4 bg-white">
+    <header class="fixed pin-x py-4 bg-white z-10">
       <div class="container flex items-center justify-between">
         <g-link class="heading-link" :to="{ name: 'home' }">
           <h1

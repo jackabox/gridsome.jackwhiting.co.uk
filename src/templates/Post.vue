@@ -3,24 +3,34 @@
     <page-header :title="$page.post.title" :date="$page.post.date"/>
 
     <div class="mb-20">
-      <article class="container article">
+      <slide-in :reverse="true" :delay="200" class="container article">
         <div class="content" v-html="$page.post.content"/>
-      </article>
+      </slide-in>
     </div>
   </Layout>
 </template>
 
 <script>
 import PageHeader from '~/components/PageHeader'
+import SlideIn from '~/components/Animation/SlideIn'
 
 export default {
   components: {
-    PageHeader
+    PageHeader,
+    SlideIn
   },
 
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.post.title,
+      meta: [
+        { name: 'author', content: 'Jack Whiting' },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.post.description
+        }
+      ]
     }
   }
 }

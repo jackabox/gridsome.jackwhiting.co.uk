@@ -4,17 +4,17 @@
 
 [[redirects]]
   from = "/posts/2018/*"
-  to = "/posts/:slug"
+  to = "/posts/:splat"
   status = 301
 
 [[redirects]]
   from = "/posts/2017/*"
-  to = "/posts/:slug"
+  to = "/posts/:splat"
   status = 301
 
 [[redirects]]
   from = "/posts/2016/*"
-  to = "/posts/:slug"
+  to = "/posts/:splat"
   status = 301
 
 [[redirects]]

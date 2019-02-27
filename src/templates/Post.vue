@@ -30,6 +30,12 @@ export default {
           name: 'description',
           content: this.$page.post.description
         }
+      ],
+      links: [
+        {
+          rel: 'canonical',
+          href: 'https://jackwhiting.co.uk/posts/' + this.$page.post.slug
+        }
       ]
     }
   }

@@ -3771,10 +3771,10 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-gridsome@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.5.1.tgz#2aa0c9c305f2f10a27a4a6377082f0df31697b58"
-  integrity sha512-JxKKS00EswY3kMKGo+EK1B+EC0cygPzooq5tPr21D5BIx//mzv/CL1tJL+XihurgLVLR2S6vakH8RWFOXhc4Bg==
+gridsome@^0.5.3:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/gridsome/-/gridsome-0.5.4.tgz#d45e61dfdce187eac56b56fcfc4b3f70899def2f"
+  integrity sha512-+oD5OpMCG+XtaK8920rmsqh123szok3ZVWDWKjqkAA6a4r2M2kNgO8zLbb9CbXwXRm2axzoIG7Ys8Xrwh6Y0MQ==
   dependencies:
     "@babel/core" "^7.0.0"
     "@gridsome/cli" "^0.0.8"

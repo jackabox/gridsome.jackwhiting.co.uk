@@ -123,7 +123,19 @@ export default {
   },
 
   metaInfo: {
-    title: 'Home'
+    meta: [
+      {
+        key: 'description',
+        name: 'description',
+        content:
+          'Product Designer &amp; Developer located in Nottingham, UK with 13 years experience. Specialising in Laravel, Vue and JavaScript.'
+      },
+      {
+        name: 'keywords',
+        content:
+          'Product Designer,Developer,Web Developer,Freelance,Nottingham,PHP,Laravel,Vue,JavaScript.'
+      }
+    ]
   }
 }
 </script>

@@ -15,7 +15,7 @@
 
           <router-link :to="node.path" class="mt-5 block">
             <span
-              class="border border-2 border-pink-lighter inline-flex pb-1 uppercase text-sm text-grey-darker hover:text-black hover:bg-pink-lighter px-2 py-1 tracking-wide"
+              class="border border-2 border-pink inline-flex pb-1 uppercase text-sm text-grey-darker hover:text-black hover:bg-pink px-2 py-1 tracking-wide"
             >Read More</span>
           </router-link>
         </slide-in>

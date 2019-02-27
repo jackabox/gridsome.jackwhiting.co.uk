@@ -2,20 +2,45 @@
   <Layout>
     <div class="container mt-0 pt-30">
       <div class="flex flex-wrap items-center row">
-        <slide-in :reverse="true" :delay="0" class="w-full md:w-6/12 column">
+        <slide-in :reverse="true" :delay="-600" class="w-full md:w-6/12 column">
           <h2 class="mb-4">Hey, I'm Jack</h2>
           <p>
-            <b class="font-semibold">PHP &amp; JavaScript Developer located in Nottingham, UK.</b>
+            <b
+              class="font-semibold"
+            >A Product Designer &amp; Developer located in Nottingham, UK with 13 years experience.</b>
           </p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+          <p>
+            Currently, I work for
+            <a
+              href="https://weareframework.co.uk"
+              target="_blank"
+              rel="noreferer noopener"
+              class="text-black border-b border-pink"
+              title="Link to Framework Design's website"
+            >Framework Design</a> - a small digital agency in the heart of Nottingham - where I specialise in crafting larger applications written with Laravel (PHP) and VueJs (JavaScript). My other tasks often involve scoping projects, writing APIs or drinking gallons of Tea.
+          </p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+          <p>
+            I dabble in the odd freelance project, as long as it's awesome, to get in touch
+            <a
+              href="mailto:hi@jackwhiting.co.uk"
+              class="text-black border-b border-pink"
+              title="Email Jack about Freelance"
+            >email me</a>.
+          </p>
+
+          <p>Otherwise, you can find me with my family, at gigs or cooking up a storm. I also have a personal battle with Crohn's Disease after being diagnosed at the age of 18.</p>
         </slide-in>
 
         <div class="w-full md:w-6/12 mt-5 column">
           <image-swipe-left>
-            <g-image src="~/assets/img/portrait.jpg" width="500" class="grid__img"/>
+            <g-image
+              src="~/assets/img/portrait.jpg"
+              width="500"
+              class="grid__img"
+              alt="Profile picture of Jack"
+            />
           </image-swipe-left>
         </div>
       </div>

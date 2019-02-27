@@ -9,11 +9,15 @@
         </g-link>
 
         <nav>
-          <g-link :to="{ name: 'home' }" class="ml-4 tracking-wide text-base text-grey-darker">Home</g-link>
           <g-link
             :to="{ name: 'posts' }"
-            class="ml-4 tracking-wide text-base text-grey-darker"
+            class="ml-5 tracking-wide text-base text-grey-darker"
           >Posts</g-link>
+
+          <a
+            href="mailto:hi@jackwhiting.co.uk"
+            class="border border-2 border-pink inline-flex pb-1 text-sm hover:text-black hover:bg-pink px-2 py-1 ml-5 tracking-wide text-grey-darker"
+          >Get In Touch</a>
         </nav>
       </div>
     </header>

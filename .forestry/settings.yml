@@ -1,0 +1,30 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: '/static/admin'
+webhook_url:
+sections:
+  - type: directory
+    path: works
+    label: Works
+    create: documents
+    match: '**/*.md'
+    templates:
+      - project
+  - type: directory
+    path: content/posts
+    label: Posts
+    create: documents
+    match: '**/*.md'
+    templates:
+      - journal
+upload_dir: uploads
+public_path: '/uploads'
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ':filename:'
+build:
+  preview_command: gridsome build
+  publish_command: gridsome build
+  preview_output_directory: public
+  output_directory: dist

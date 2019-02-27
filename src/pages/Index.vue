@@ -74,7 +74,11 @@
               :delay="200 * parseInt(index)"
               class="my-3 flex flex-wrap justify-between row items-center"
             >
-              <router-link :to="node.path" class="column w-12/12 lg:w-10/12">
+              <router-link
+                :to="node.path"
+                class="column w-12/12 lg:w-10/12"
+                :title="'Link to post: ' + node.title"
+              >
                 <h3
                   v-html="node.title"
                   class="mb-0 text-grey-darker font-semibold hover:text-black leading-loose"

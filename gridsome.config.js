@@ -33,6 +33,9 @@ module.exports = {
       options: {
         id: 'UA-86105963-1'
       }
+    },
+    {
+      use: 'gridsome-plugin-purgecss'
     }
   ],
 
@@ -55,13 +58,20 @@ module.exports = {
           ]
         )
 
-        if (process.env.NODE_ENV === 'production') {
-          options.plugins.push(
-            ...[require('@fullhuman/postcss-purgecss')('./purgecss.config.js')]
-          )
-        }
+        // if (process.env.NODE_ENV === 'production') {
+        //   options.plugins.push(
+        //     ...[require('@fullhuman/postcss-purgecss')('./purgecss.config.js')]
+        //   )
+        // }
 
         return options
       })
+  }
+}
+
+// default extractor
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g) || []
   }
 }

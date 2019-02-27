@@ -1080,9 +1080,9 @@ acorn-dynamic-import@^4.0.0:
   integrity sha512-d3OEjQV4ROpoflsnUA8HozoIR504TFxNivYEUi6uwz0IYhBkTDXGuWlNdMtybRt3nqVx/L6XqMt0FxkXuWKZhw==
 
 acorn@^6.0.5:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.0.tgz#b0a3be31752c97a0f7013c5f4903b71a05db6818"
-  integrity sha512-MW/FjM+IvU9CgBzjO3UIPCE2pyEwUsoFl+VGdczOPEdxfGFjuKny/gN54mOuX7Qxmb9Rg9MCn2oKiSUeW+pjrw==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
+  integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -1172,9 +1172,9 @@ apollo-link@^1.2.3:
     zen-observable-ts "^0.8.15"
 
 apollo-utilities@^1.0.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.2.0.tgz#ba5a1271c55e0d79069b1919c9d533164a70f9c3"
-  integrity sha512-4+vxCpEuirQjPqLCckBnOMGZxK/c+2eJtYEbh3xhccNM1pYB5Gx/lrfCdZS5MKDykuWZYY08EvidDy21nr049w==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.2.1.tgz#1c3a1ebf5607d7c8efe7636daaf58e7463b41b3c"
+  integrity sha512-Zv8Udp9XTSFiN8oyXOjf6PMHepD4yxxReLsl6dPUy5Ths7jti3nmlBzZUOxuTWRwZn0MoclqL7RQ5UEJN8MAxg==
   dependencies:
     fast-json-stable-stringify "^2.0.0"
     ts-invariant "^0.2.1"
@@ -3770,6 +3770,13 @@ gray-matter@^4.0.2:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
+
+gridsome-plugin-purgecss@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-purgecss/-/gridsome-plugin-purgecss-1.0.10.tgz#6478e046bf3a38b8c1a6b4638ce92e55fa343f37"
+  integrity sha512-e7dPCkgxodrbLtl1BVScYlDB3oFYsv1fHQVuopbGZo2bpCdQdOLrL/ZAZmzpsUL37lQyVGyUgWtCMAqDcuXCaQ==
+  dependencies:
+    "@fullhuman/postcss-purgecss" "^1.1.0"
 
 gridsome@^0.5.3:
   version "0.5.4"

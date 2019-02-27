@@ -3,11 +3,13 @@ let colors = {
 
   black: '#000000',
   white: '#ffffff',
+
   'grey-darker': '#555555',
   grey: '#9e9e9e',
+  'grey-lighter': '#dedede',
 
   'pink-darker': '#ff8ea3',
-  pink: '#ffc8d2',
+  pink: '#edd5d5',
   'pink-lighter': '#f8f0f0'
 }
 

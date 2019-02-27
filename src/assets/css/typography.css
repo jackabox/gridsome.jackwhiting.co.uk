@@ -58,10 +58,13 @@ a * {
 
 .article a,
 .article a:visited {
-  color: config('colors.pink-darker');
+  padding-bottom: 2px;
+  border-bottom: 2px solid config('colors.pink');
+  color: inherit;
 }
 
 .article a:hover,
 .article a:focus {
-  text-decoration: underline;
+  background: config('colors.pink-lighter');
+  border-color: config('colors.pink-lighter');
 }

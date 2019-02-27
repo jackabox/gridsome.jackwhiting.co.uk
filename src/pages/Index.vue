@@ -20,14 +20,13 @@
         </div>
       </div>
     </div>
-
+    <!-- 
     <div class="bg-pink-lighter py-20 mt-20">
       <div class="container">
-        <h2>Recent Projects</h2>
+        <h2>Recent Works</h2>
       </div>
-    </div>
-
-    <div class="py-20">
+    </div>-->
+    <div class="bg-pink-lighter py-20 mt-20">
       <div class="container">
         <h2>Recent Posts</h2>
 
@@ -40,7 +39,7 @@
             <router-link :to="node.path" class="column w-12/12 lg:w-10/12">
               <h3
                 v-html="node.title"
-                class="mb-0 text-grey-darker font-semibold hover:text-pink-darker leading-loose"
+                class="mb-0 text-grey-darker font-semibold hover:text-black leading-loose"
               />
             </router-link>
 
@@ -61,7 +60,7 @@
         node {
           _id
           title
-          date (format: "D MMMM, YYYY")
+          date (format: "D MMM, YYYY")
           description
           path
         }

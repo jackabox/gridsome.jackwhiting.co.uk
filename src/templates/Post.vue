@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <page-header :title="$page.blogPost.title" :date="$page.blogPost.date"/>
+    <page-header :title="$page.post.title" :date="$page.post.date"/>
 
     <div class="mb-20">
       <article class="container article">
-        <div class="content" v-html="$page.blogPost.content"/>
+        <div class="content" v-html="$page.post.content"/>
       </article>
     </div>
   </Layout>
@@ -27,8 +27,8 @@ export default {
 </script>
 
 <page-query>
-  query BlogPost ($path: String!) {
-    blogPost (path: $path) {
+  query Post ($path: String!) {
+    post (path: $path) {
       title
       date (format: "D MMMM, YYYY")
       content,

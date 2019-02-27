@@ -13,7 +13,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'content/posts/*.md',
-        typeName: 'Posts',
+        typeName: 'Post',
         route: '/posts/:slug',
         remark: {
           plugins: ['@gridsome/remark-prismjs']
@@ -24,7 +24,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'content/works/*.md',
-        typeName: 'Works',
+        typeName: 'Work',
         route: '/works/:slug'
       }
     }

@@ -33,7 +33,7 @@
 
         <ul class="list-reset mt-5">
           <li
-            v-for="{ node } in $page.allPosts.edges"
+            v-for="{ node } in $page.allPost.edges"
             :key="node._id"
             class="my-3 flex flex-wrap justify-between row items-center"
           >
@@ -55,8 +55,8 @@
 </template>
 
 <page-query>
-  query Posts ($page: Int) {
-    allPosts (page: $page, perPage: 5) {
+  query Post ($page: Int) {
+    allPost (page: $page, perPage: 5) {
       edges {
         node {
           _id

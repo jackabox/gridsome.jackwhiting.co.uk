@@ -3,7 +3,7 @@
     <page-header title="Posts"/>
 
     <ul class="list-reset">
-      <li v-for="{ node } in $page.allPosts.edges" :key="node._id" class="py-10">
+      <li v-for="{ node } in $page.allPost.edges" :key="node._id" class="py-10">
         <div class="container">
           <router-link :to="node.path">
             <h2 v-html="node.title" class="hover:text-pink-darker"/>
@@ -25,8 +25,8 @@
 </template>
 
 <page-query>
-  query Home ($page: Int) {
-    allPosts (page: $page) {
+  query Page ($page: Int) {
+    allPost (page: $page) {
       edges {
         node {
           _id

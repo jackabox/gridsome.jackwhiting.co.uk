@@ -6,7 +6,7 @@ let colors = {
   'grey-darker': '#555555',
   grey: '#9e9e9e',
 
-  'pink-darker': '#ffa3b4',
+  'pink-darker': '#ff8ea3',
   pink: '#ffc8d2',
   'pink-lighter': '#f8f0f0'
 }
@@ -185,6 +185,7 @@ module.exports = {
     '8': '40px',
     '9': '45px',
     '10': '50px',
+    '20': '100px',
     '30': '150px',
     '40': '200px'
   },
@@ -216,7 +217,8 @@ module.exports = {
     '7': '35px',
     '8': '40px',
     '9': '45px',
-    '10': '50px'
+    '10': '50px',
+    '20': '100px'
   },
 
   shadows: {

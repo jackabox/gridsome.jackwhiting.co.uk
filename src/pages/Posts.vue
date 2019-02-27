@@ -3,10 +3,10 @@
     <page-header title="Posts"/>
 
     <ul class="list-reset">
-      <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id" class="py-10">
+      <li v-for="{ node } in $page.allPosts.edges" :key="node._id" class="py-10">
         <div class="container">
           <router-link :to="node.path">
-            <h2 v-html="node.title"/>
+            <h2 v-html="node.title" class="hover:text-pink-darker"/>
           </router-link>
 
           <div class="mt-3 mb-2 text-sm tracking-wide uppercase text-grey-darker">{{ node.date }}</div>
@@ -26,7 +26,7 @@
 
 <page-query>
   query Home ($page: Int) {
-    allBlogPost (page: $page) {
+    allPosts (page: $page) {
       edges {
         node {
           _id

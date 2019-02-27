@@ -35,7 +35,10 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-plugin-purgecss'
+      use: 'gridsome-plugin-purgecss',
+      options: {
+        whitelist: ['pre', 'code', 'a']
+      }
     }
   ],
 

@@ -123,6 +123,7 @@ export default {
   },
 
   metaInfo: {
+    title: 'Product Designer & Developer',
     meta: [
       {
         key: 'description',

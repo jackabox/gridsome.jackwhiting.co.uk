@@ -7,7 +7,7 @@
           <p>
             <b
               class="font-semibold"
-            >A Product Designer &amp; Developer located in Nottingham, UK with 13 years experience.</b>
+            >A Freelance Product Designer &amp; Developer located in Nottingham, UK with over 10 years experience.</b>
           </p>
 
           <p>
@@ -22,17 +22,16 @@
           </p>
 
           <p>
-            I dabble in the odd freelance project, as long as it's awesome, to get in touch
+            I love taking on freelance projects in my spare time. If you have something you want to work on together then
             <a
               href="mailto:hi@jackwhiting.co.uk"
               class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-lighter"
               title="Email Jack about Freelance"
-            >email me</a>.
+            >please get in touch with me</a>.
           </p>
 
           <p>
-            Otherwise, you can find me with my family, at gigs or
-            <s class="text-grey">burning</s> cooking food. I also have a daily battle with
+            Otherwise, you can find me with my family, at gigs or cooking food. I also live with
             <a
               href="https://www.crohnsandcolitis.org.uk/about-inflammatory-bowel-disease/crohns-disease"
               target="_blank"
@@ -55,13 +54,49 @@
         </div>
       </div>
     </div>
-    <!-- 
+
     <div class="bg-pink-lighter py-20 mt-20">
       <div class="container">
-        <h2>Recent Works</h2>
+        <slide-in :reverse="true">
+          <h2>Selected Works</h2>
+        </slide-in>
+
+        <ul class="list-reset mt-5 flex flex-wrap row justify-between">
+          <li
+            v-for="({ node }, index) in $page.allWork.edges"
+            :key="node._id"
+            class="column w-12/12 lg:w-5/12"
+          >
+            <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-6">
+              <div
+                class="text-sm tracking-wide uppercase text-grey-darker mt-1 lg:mt-0"
+              >{{ node.date }}</div>
+
+              <a
+                :href="node.link"
+                target="_blank"
+                rel="noopener"
+                :title="'Link to website for ' + node.title"
+              >
+                <h3 v-html="node.title" class="mb-0 text-grey-darker font-semibold leading-loose"/>
+              </a>
+
+              <p class="mt-2" v-text="node.description"></p>
+
+              <div class="mt-2">
+                <span
+                  class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-white mr-3"
+                  v-for="(item, index) in node.tags"
+                  :key="index"
+                >{{ item }}</span>
+              </div>
+            </slide-in>
+          </li>
+        </ul>
       </div>
-    </div>-->
-    <div class="bg-pink-lighter py-20 mt-20">
+    </div>
+
+    <div class="py-20">
       <div class="container">
         <slide-in :reverse="true">
           <h2>Recent Posts</h2>
@@ -106,6 +141,19 @@
           date (format: "D MMM, YYYY")
           description
           path
+        }
+      }
+    }
+
+    allWork (page: $page, perPage: 4) {
+      edges {
+        node {
+          _id
+          title
+          date (format: "YYYY")
+          tags
+          description
+          link
         }
       }
     }

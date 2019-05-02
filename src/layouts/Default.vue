@@ -14,6 +14,11 @@
             class="ml-5 tracking-wide text-base text-grey-darker"
             title="View all posts"
           >Posts</g-link>
+          <g-link
+            :to="{ name: 'works' }"
+            class="ml-5 tracking-wide text-base text-grey-darker"
+            title="View all works"
+          >Works</g-link>
 
           <a
             href="mailto:hi@jackwhiting.co.uk"

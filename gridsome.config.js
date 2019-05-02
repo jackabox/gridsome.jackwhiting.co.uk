@@ -37,7 +37,7 @@ module.exports = {
     {
       use: 'gridsome-plugin-purgecss',
       options: {
-        whitelist: ['pre', 'code', 'a']
+        whitelist: ['pre', 'code', 'a', 'html', 'body', 'markdown']
       }
     }
   ],

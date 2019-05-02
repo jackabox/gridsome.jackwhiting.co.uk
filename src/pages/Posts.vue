@@ -52,10 +52,16 @@ export default {
     SlideIn
   },
 
-  metaInfo() {
-    return {
-      title: 'Posts'
-    }
+  metaInfo: {
+    title: 'Posts',
+    meta: [
+      {
+        key: 'description',
+        name: 'description',
+        content:
+          'Thoughts and ramblings of Jack about freelancing, laravel, vuejs, wordpress and more.'
+      }
+    ]
   }
 }
 </script>

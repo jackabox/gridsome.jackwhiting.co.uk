@@ -74,10 +74,16 @@ export default {
     SlideIn
   },
 
-  metaInfo() {
-    return {
-      title: 'Works'
-    }
+  metaInfo: {
+    title: 'Works',
+    meta: [
+      {
+        key: 'description',
+        name: 'description',
+        content:
+          'A selection of works and projects that I have worked on over the last few years. Includes Craft, Laravel, VueJS and more.'
+      }
+    ]
   }
 }
 </script>

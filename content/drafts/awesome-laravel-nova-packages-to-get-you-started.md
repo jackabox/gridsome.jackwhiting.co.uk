@@ -6,6 +6,7 @@ description: A collection of five packages to kickstart your next project with L
   Nova. These are some of my personal favourites that I use on every project.
 tags:
 - laravel
+- nova
 
 ---
 I've been using Laravel Nova a lot since it's release and find myself using the same packages across projects just because they're awesome and work well. In this post I've compiled a list of my five favourite packages to include in your Laravel Nova install.

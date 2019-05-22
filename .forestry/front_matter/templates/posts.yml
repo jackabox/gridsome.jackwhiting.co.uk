@@ -1,0 +1,31 @@
+---
+label: Posts
+hide_body: false
+fields:
+- type: text
+  label: Title
+  name: title
+  config:
+    required: true
+- type: text
+  name: slug
+  label: Slug
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  config:
+    date_format: DD/MM/YYYY
+    required: true
+- type: textarea
+  name: description
+  label: Description
+  config:
+    required: true
+- type: tag_list
+  name: tags
+  label: Tags
+pages:
+- content/drafts/awesome-laravel-nova-packages-to-get-you-started.md
+- content/drafts/handling-redirects-in-a-laravel-application.md

@@ -66,5 +66,5 @@ a * {
 .article a:hover,
 .article a:focus {
   background: config('colors.pink-lighter');
-  border-color: config('colors.pink-lighter');
+  border-color: config('colors.pink-alt');
 }

@@ -1,29 +1,25 @@
 <template>
   <Layout>
-    <page-header title="Works"/>
+    <page-header title="Works" />
 
     <div class="container">
       <ul class="list-reset mt-5 flex flex-wrap row justify-between">
         <li
           v-for="({ node }, index) in $page.allWork.edges"
           :key="node._id"
-          class="column w-12/12 md:w-6/12 lg:w-5/12"
+          class="column w-12/12 md:w-9/12"
         >
           <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-6">
-            <div
-              class="text-sm tracking-wide uppercase text-grey-darker mt-1 lg:mt-0"
-            >{{ node.date }}</div>
-
             <a
               :href="node.link"
               target="_blank"
               rel="noopener"
               :title="'Link to website for ' + node.title"
             >
-              <h3 v-html="node.title" class="mb-0 text-grey-darker font-semibold leading-loose"/>
+              <h3 v-html="node.title" class="mb-0 text-black font-semibold leading-loose" />
             </a>
 
-            <p class="mt-2" v-text="node.description"></p>
+            <p class="mt-2 text-grey-darker text-base" v-text="node.description"></p>
 
             <a
               :href="node.link"

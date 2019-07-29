@@ -7,39 +7,30 @@
           <p>
             <b
               class="font-semibold"
-            >A Freelance Product Designer &amp; Developer located in Nottingham, UK with over 10 years experience.</b>
+            >A Web Developer located in Nottingham, UK with over 10 years experience.</b>
           </p>
 
           <p>
-            I work for
+            I currently work as a Lead Developer for
             <a
               href="https://weareframework.co.uk"
               target="_blank"
               rel="noreferer noopener"
-              class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-lighter"
+              class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-alt"
               title="Link to Framework Design's website"
-            >Framework Design</a> - a small digital agency in the heart of Nottingham - where I specialise in crafting larger applications written with Laravel (PHP) and Vue (JavaScript). My other tasks often involve scoping projects, writing APIs or drinking gallons of Tea.
+            >Framework Design</a> - a small digital agency in the heart of Nottingham - where I specialise in crafting larger applications written with Laravel (PHP) and Vue (JavaScript). My other tasks often involve scoping projects, writing technical specifications and aiding others.
           </p>
 
           <p>
-            I love taking on freelance projects in my spare time. If you have something you want to work on together then
+            I love taking on freelance projects in my spare time, especially in JavaScript. If you have something you want to work on together then please feel free
             <a
               href="mailto:hi@jackwhiting.co.uk"
-              class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-lighter"
+              class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-alt"
               title="Email Jack about Freelance"
-            >please get in touch with me</a>.
+            >to get in touch with me</a>.
           </p>
 
-          <p>
-            Otherwise, you can find me with my family, at gigs or cooking food. I also live with
-            <a
-              href="https://www.crohnsandcolitis.org.uk/about-inflammatory-bowel-disease/crohns-disease"
-              target="_blank"
-              rel="noreferer noopener"
-              class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-lighter"
-              title="Link to find out more about Crohn's"
-            >Crohn's Disease</a> after being diagnosed at the age of 18.
-          </p>
+          <p>Otherwise, you can find me with my family and puppy, at gigs or cooking food.</p>
         </slide-in>
 
         <div class="w-full md:w-6/12 mt-5 column">
@@ -55,46 +46,80 @@
       </div>
     </div>
 
-    <div class="bg-pink-lighter py-20 mt-20">
+    <section class="bg-pink-lighter py-20 mt-20">
       <div class="container">
         <slide-in :reverse="true">
           <h2>Selected Works</h2>
         </slide-in>
 
-        <ul class="list-reset mt-5 flex flex-wrap row justify-between">
-          <li
-            v-for="({ node }, index) in $page.allWork.edges"
-            :key="node._id"
-            class="column w-12/12 lg:w-5/12"
-          >
-            <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-6">
-              <div
-                class="text-sm tracking-wide uppercase text-grey-darker mt-1 lg:mt-0"
-              >{{ node.date }}</div>
+        <div class="flex flex-wrap row justify-between">
+          <ul class="list-reset w-12/12 lg:w-8/12 mt-6">
+            <li
+              v-for="({ node }, index) in $page.allWork.edges"
+              :key="node._id"
+              class="column w-12/12"
+            >
+              <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-6">
+                <div class="text-sm tracking-wide uppercase text-grey-darker mt-1 lg:mt-0"></div>
 
-              <a
-                :href="node.link"
-                target="_blank"
-                rel="noopener"
-                :title="'Link to website for ' + node.title"
-              >
-                <h3 v-html="node.title" class="mb-0 text-grey-darker font-semibold leading-loose"/>
-              </a>
+                <a
+                  :href="node.link"
+                  target="_blank"
+                  rel="noopener"
+                  :title="'Link to website for ' + node.title"
+                >
+                  <h3 class="mb-0 text-black font-semibold leading-loose">
+                    <span>{{ node.title }}</span>
+                  </h3>
+                </a>
 
-              <p class="mt-2" v-text="node.description"></p>
+                <p class="mt-1 text-base" v-text="node.description"></p>
 
-              <div class="mt-2">
-                <span
-                  class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-white mr-3"
-                  v-for="(item, index) in node.tags"
-                  :key="index"
-                >{{ item }}</span>
-              </div>
+                <div class="mt-1">
+                  <span
+                    class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-white mr-3"
+                    v-for="(item, index) in node.tags"
+                    :key="index"
+                  >{{ item }}</span>
+                </div>
+              </slide-in>
+            </li>
+          </ul>
+
+          <div class="w-12/12 lg:w-3/12">
+            <slide-in :reverse="true">
+              <h4 class="mt-3 mb-2">Other Clients</h4>
+              <p
+                class="text-base"
+              >I've worked on various projects overtime with some of the following clients:</p>
+              <ul class="ml-1 pl-4">
+                <li class="text-base mt-1">
+                  <span class="text-black" target="_blank" rel="noopener noreferrer">Millpledge</span>
+                </li>
+                <li class="text-base mt-1">
+                  <span href class="text-black" target="_blank" rel="noopener noreferrer">Travelteer</span>
+                </li>
+                <li class="text-base mt-1">
+                  <span
+                    class="text-black"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Capture Our Wedding</span>
+                </li>
+                <li class="text-base mt-1">
+                  <span
+                    href
+                    class="text-black"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Pancake App</span>
+                </li>
+              </ul>
             </slide-in>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
     <div class="py-20">
       <div class="container">
@@ -171,13 +196,13 @@ export default {
   },
 
   metaInfo: {
-    title: 'Product Designer & Developer',
+    title: 'PHP Web Developer & Product Designer | Nottingham',
     meta: [
       {
         key: 'description',
         name: 'description',
         content:
-          'Product Designer &amp; Developer located in Nottingham, UK with 13 years experience. Specialising in Laravel, Vue and JavaScript.'
+          'Web Developer located in Nottingham, UK with over 10 years experience. Specialising in Laravel, Vue and JavaScript.'
       },
       {
         name: 'keywords',

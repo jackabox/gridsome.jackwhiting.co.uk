@@ -10,7 +10,8 @@ let colors = {
 
   'pink-darker': '#ff8ea3',
   pink: '#edd5d5',
-  'pink-lighter': '#f8f0f0'
+  'pink-lighter': '#f8f0f0',
+  'pink-alt': '#db5777'
 }
 
 module.exports = {

@@ -1,18 +1,18 @@
 <template>
   <Layout>
-    <page-header title="Posts"/>
+    <page-header title="Posts" />
 
     <div class="container">
       <ul class="list-reset">
         <li v-for="({node}, index) in $page.allPost.edges" :key="node._id" class="py-10">
           <slide-in :reverse="true" :delay="200 * parseInt(index)">
             <router-link :to="node.path" :title="'Link to post: ' + node.title">
-              <h2 v-html="node.title"/>
+              <h2 v-html="node.title" />
             </router-link>
 
             <div class="mt-3 mb-2 text-sm tracking-wide uppercase text-grey-darker">{{ node.date }}</div>
 
-            <div v-html="node.description"/>
+            <div v-html="node.description" />
 
             <router-link :to="node.path" class="mt-5 block" :title="'Link to post: ' + node.title">
               <span

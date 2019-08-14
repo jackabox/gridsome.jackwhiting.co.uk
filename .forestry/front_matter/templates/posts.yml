@@ -27,4 +27,5 @@ fields:
   name: tags
   label: Tags
 pages:
+- content/drafts/quick-tip-handling-multiple-anchor-links-in-cards-better.md
 - content/drafts/handling-redirects-in-a-laravel-application.md

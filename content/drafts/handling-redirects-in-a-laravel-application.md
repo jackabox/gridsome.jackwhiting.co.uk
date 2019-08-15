@@ -1,8 +1,9 @@
 ---
-title: Handling SEO Redirects in a Laravel Application
-slug: handling-in-a-laravel-application
+title: Handling SEO Redirects in a Laravel Application via Files and/or Database
+slug: handling-seo-redirects-in-a-laravel-application
 date: 2019-08-13 23:00:00 +0000
-description: Got to handle those redirects
+description: 'Utilising a Spatie package, we''re going to setup a way to handle redirects
+  (including wildcards) through a config file and/or the database. '
 tags:
 - laravel
 - seo
@@ -12,19 +13,19 @@ In this article, we're going to talk about an easy way to manage our redirects w
 
 A lot of the hard work has been done for us by the wonderful team at Spatie whom have produced a redirector package which allows for route params to be read and parsed. You can find this package at [https://github.com/spatie/laravel-missing-page-redirector]().
 
-Let’s get started on setting up our application. 
+Let’s get started on setting up our application.
 
 ## Setting up the Redirector Package
 
-Install the package via Composer.
+Install the required package via Composer.
 
     composer require spatie/laravel-missing-page-redirector
 
-Next, we’ll need to publish the package config, we can do that by running the following in our terminal
+Next, we’ll need to publish the package config, we can do this by running the following in our terminal.
 
     php artisan vendor:publish --provider="Spatie\MissingPageRedirector\MissingPageRedirectorServiceProvider"
 
-In this file you can edit the `redirects = []` with any redirects you wish to add, specifying the **from** and **to** destination as a `key => value` pairing, for example:
+In this file you will find an empty array of redirects, this is what we can edit with any redirects you wish to add, specifying the **from** and **to** destination as a `key => value` pairing, for example:
 
     redirects = [
     	'/home' => '/',
@@ -40,13 +41,13 @@ For the redirector to work, we need to add the middleware to `app/Http/Kernel.ph
 
 ## Connecting with our Database
 
-Sometimes, we'll want to have access to all of our redirects in the database - for example if you are passing the site off to a client and want to give them control. To do this we'll need to create the database structure for the redirects and then modify the config we published earlier to read them.
+Sometimes, we will want to have access to all of our redirects in the database - for example if you are passing the site off to a client and want to give them control. To do this we will need to create the database structure for the redirects and then modify the config we published earlier to read them.
 
-Firstly, we need to make the migration to create our database.
+Let's get started by making the migration to create our database.
 
     php artisan make:migration create_redirects_table
 
-Update the migration as below
+Update the generated migration as below:
 
 ```php
 <?php
@@ -87,13 +88,13 @@ Run the migration so that the database is created.
 
     php artisan migrate
 
-Let's make the model now to handle the logic retrieving our database entries.
+Next, let's make the model to handle the retrieving/storing of our database entries.
 
 ```bash
 php artisan make:model Models/Redirect
 ```
 
-Any replace all of the code in the newly created file with the following:
+Again, replace all of the code in the newly created file with the following:
 
 ```php
 <?php
@@ -118,7 +119,7 @@ class Redirect extends Model
 }
 ```
 
-To explain the code above a little, I only have the ID as guarded and allow everything else to be mass assignable, you can update this to your preferences. You will also notice I am using the `boot()` function here to clear a cached value, this will come into play a little later when we handle the redirects. I would usually achieve this through a [model observer](https://laravel.com/docs/5.8/eloquent#observers), but for the purpose of this tutorial, I've left it on the model.
+To explain the code above a little, we only have the ID as guarded and allow everything else to be mass assignable, you can update this to your preferences. You will also notice I am using the `boot()` function here to clear a cached value, this will come into play a little later when we handle the redirects. I would usually achieve this through a [model observer](https://laravel.com/docs/5.8/eloquent#observers), but for the purpose of this tutorial, I've left it on the model.
 
 Next, let’s create a redirector class that inherits the Redirector interface defined by the Spatie package and update it to allow for population from the database also. Create a new file in `App\Services` (or wherever you wish to store this) called **DatabaseRedirector**
 
@@ -181,4 +182,4 @@ return [
 ];
 ```
 
-Populate the database where needed, and enjoy.
+Populate the database where needed, and enjoy!

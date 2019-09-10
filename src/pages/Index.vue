@@ -12,7 +12,7 @@
 
           <p>I specialise in crafting websites with PHP and JavaScript. A few of my favourite tools are Laravel, Craft and VueJS. I prefer to write sites using these, but I'm also happy to use other systems (such as WordPress) if there is a need for it.</p>
 
-          <p>Before I decided to go freelance, I've worked across multiple digital agencies as (Lead) Web Deeloper this has granted me experience in the delivery of websites from the get go and allows me to push this knowledge into any work I undertake.</p>
+          <p>Before I decided to go freelance, I've worked across multiple digital agencies as (Lead) Web Developer which has granted me experience across all stages of delivering a website and allows me to push this knowledge into any work I undertake.</p>
 
           <p>
             <a

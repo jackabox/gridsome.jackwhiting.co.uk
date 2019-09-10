@@ -3,34 +3,24 @@
     <div class="container mt-0 pt-30">
       <div class="flex flex-wrap items-center row">
         <slide-in :reverse="true" :delay="-600" class="w-full md:w-6/12 column">
-          <h2 class="mb-4">Hey, I'm Jack</h2>
+          <h2 class="mb-4">Freelance Web Developer</h2>
           <p>
             <b
               class="font-semibold"
-            >A Web Developer located in Nottingham, UK with over 10 years experience.</b>
+            >Hey, I am Jack a freelance Web Developer located in Nottingham, UK with over 10 years experience.</b>
           </p>
 
-          <p>
-            I currently work as a Lead Developer for
-            <a
-              href="https://weareframework.co.uk"
-              target="_blank"
-              rel="noreferer noopener"
-              class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-alt"
-              title="Link to Framework Design's website"
-            >Framework Design</a> - a small digital agency in the heart of Nottingham - where I specialise in crafting larger applications written with Laravel (PHP) and Vue (JavaScript). My other tasks often involve scoping projects, writing technical specifications and aiding others.
-          </p>
+          <p>I specialise in crafting websites with PHP and JavaScript. A few of my favourite tools are Laravel, Craft and VueJS. I prefer to write sites using these, but I'm also happy to use other systems (such as WordPress) if there is a need for it.</p>
+
+          <p>Before becoming a freelancer I worked in various digital agencies in ranging roles up to Lead Web Developer. Because of this, I've gained a multitude of experience which I push into every piece of work.</p>
 
           <p>
-            I love taking on freelance projects in my spare time, especially in JavaScript. If you have something you want to work on together then please feel free
             <a
               href="mailto:hi@jackwhiting.co.uk"
               class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-alt"
               title="Email Jack about Freelance"
-            >to get in touch with me</a>.
+            >I'm currently available for new projects &rarr;</a>
           </p>
-
-          <p>Otherwise, you can find me with my family and puppy, at gigs or cooking food.</p>
         </slide-in>
 
         <div class="w-full md:w-6/12 mt-5 column">
@@ -91,28 +81,19 @@
               <h4 class="mt-3 mb-2">Other Clients</h4>
               <p
                 class="text-base"
-              >I've worked on various projects overtime with some of the following clients:</p>
+              >Most of my work has been under NDA, but here are a few of the clients that I've worked with:</p>
               <ul class="ml-1 pl-4">
                 <li class="text-base mt-1">
-                  <span class="text-black" target="_blank" rel="noopener noreferrer">Millpledge</span>
+                  <span class="text-black">Travelteer</span>
                 </li>
                 <li class="text-base mt-1">
-                  <span href class="text-black" target="_blank" rel="noopener noreferrer">Travelteer</span>
+                  <span class="text-black">Capture Our Wedding</span>
                 </li>
                 <li class="text-base mt-1">
-                  <span
-                    class="text-black"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >Capture Our Wedding</span>
+                  <span class="text-black">Pancake App</span>
                 </li>
                 <li class="text-base mt-1">
-                  <span
-                    href
-                    class="text-black"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >Pancake App</span>
+                  <span class="text-black">and more...</span>
                 </li>
               </ul>
             </slide-in>
@@ -196,18 +177,18 @@ export default {
   },
 
   metaInfo: {
-    title: 'PHP Web Developer & Product Designer | Nottingham',
+    title: 'Jack Whiting | Freelance PHP and JS Web Developer | Nottingham',
     meta: [
       {
         key: 'description',
         name: 'description',
         content:
-          'Web Developer located in Nottingham, UK with over 10 years experience. Specialising in Laravel, Vue and JavaScript.'
+          'Freelance Developer located in Nottingham, UK with over 10 years experience. Specialising in Laravel, Craft and Vue applications. Currently available for new projects.'
       },
       {
         name: 'keywords',
         content:
-          'Product Designer,Developer,Web Developer,Freelance,Nottingham,PHP,Laravel,Vue,JavaScript.'
+          'Web,Developer,Web Developer,Freelance,Nottingham,PHP,Laravel,Vue,JavaScript,WordPress,Craft.'
       }
     ]
   }

@@ -1,7 +1,7 @@
 ---
 title: Handling SEO Redirects in a Laravel Application via Files and/or Database
 slug: handling-seo-redirects-in-a-laravel-application
-date: 2019-08-13 23:00:00 +0000
+date: 2019-08-14 11:00:00
 description: 'Utilising a Spatie package, we''re going to setup a way to handle redirects
   (including wildcards) through a config file and/or the database. '
 tags:

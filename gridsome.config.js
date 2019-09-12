@@ -37,7 +37,16 @@ module.exports = {
     {
       use: 'gridsome-plugin-purgecss',
       options: {
-        whitelist: ['pre', 'code', 'a', 'html', 'body', 'markdown']
+        content: [
+          './src/**/*.vue',
+          './src/**/*.html',
+          './src/**/*.js',
+          './src/**/*.md'
+        ],
+        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+        whitelist: ['pre', 'code', 'a', 'html', 'body', 'markdown'],
+        whitelistPatterns: [/^language/],
+        whitelistPatternsChildren: [/^language/]
       }
     }
   ],

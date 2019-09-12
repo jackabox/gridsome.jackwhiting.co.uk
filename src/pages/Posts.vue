@@ -14,10 +14,12 @@
 
             <div v-html="node.description" />
 
-            <router-link :to="node.path" class="mt-5 block" :title="'Link to post: ' + node.title">
-              <span
-                class="border border-2 border-pink inline-flex pb-1 uppercase text-sm text-grey-darker hover:text-black hover:bg-pink px-2 py-1 tracking-wide"
-              >Read More</span>
+            <router-link
+              :to="node.path"
+              class="link text-base mt-5 inline-block block"
+              :title="'Link to post: ' + node.title"
+            >
+              <span class>Read More</span>
             </router-link>
           </slide-in>
         </li>

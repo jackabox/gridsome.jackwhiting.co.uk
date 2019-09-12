@@ -1,8 +1,4 @@
-/**
- * GHColors theme by Avi Aryan (http://aviaryan.in)
- * Inspired by Github syntax coloring
- */
-
+/* purgecss start ignore */
 code[class*='language-'],
 pre[class*='language-'] {
   color: #393a34;
@@ -45,8 +41,7 @@ pre[class*='language-'] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
-  border: 1px solid #dddddd;
-  background-color: white;
+  border: 1px solid config('colors.black');
 }
 
 :not(pre) > code[class*='language-'],
@@ -55,10 +50,14 @@ pre[class*='language-'] {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  padding: 0.3em;
+  padding: 0.4em;
   padding-top: 1px;
   padding-bottom: 1px;
-  background: config('colors.pink-lighter');
+  background: config('colors.black');
+  color: config('colors.white');
+  border-radius: 3px;
+  transform: translateY(-3px);
+  @appy rounded-sm;
   /* border: 1px solid #dddddd; */
 }
 
@@ -124,3 +123,4 @@ pre[class*='language-'] {
 .token.italic {
   font-style: italic;
 }
+/* purgecss end ignore */

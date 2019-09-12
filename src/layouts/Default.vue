@@ -23,15 +23,9 @@
           >Posts</g-link>
           <g-link
             :to="{ name: 'contact' }"
-            class="ml-5 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
+            class="ml-5 md:ml-7 tracking-wide text-base text-site hover:text-site-darker"
             title="Contact Me"
           >Get In Touch</g-link>
-
-          <a
-            href="mailto:hi@jackwhiting.co.uk?subject=Potential New Project&body=Hi Jack, I'd like to get in touch with you about some possible work..."
-            title="Get in touch with Jack"
-            class="font-medium tracking-wide text-site no-underline md:ml-7 hidden md:inline-block"
-          >Available For Hire</a>
         </nav>
       </div>
     </header>

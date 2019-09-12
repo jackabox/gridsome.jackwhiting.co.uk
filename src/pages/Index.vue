@@ -10,16 +10,20 @@
             >Hey, I am Jack a freelance Web Developer located in Nottingham, UK with over 10 years experience.</b>
           </p>
 
-          <p>I specialise in crafting websites with PHP and JavaScript. A few of my favourite tools are Laravel, Craft and VueJS. I prefer to write sites using these, but I'm also happy to use other systems (such as WordPress) if there is a need for it.</p>
+          <p
+            class="mt-4"
+          >I specialise in crafting websites with PHP and JavaScript. A few of my favourite tools are Laravel, Craft and VueJS. I prefer to write sites using these, but I'm also happy to use other systems (such as WordPress) if there is a need for it.</p>
 
-          <p>Before I decided to go freelance, I've worked across multiple digital agencies as (Lead) Web Developer which has granted me experience across all stages of delivering a website and allows me to push this knowledge into any work I undertake.</p>
+          <p
+            class="mt-4"
+          >Before I decided to go freelance, I've worked across multiple digital agencies as (Lead) Web Developer which has granted me experience across all stages of delivering a website and allows me to push this knowledge into any work I undertake.</p>
 
           <p>
-            <a
-              href="mailto:hi@jackwhiting.co.uk"
-              class="text-black border-b border-pink hover:bg-pink-lighter hover:border-pink-alt"
+            <g-link
+              :to="{ name: 'contact' }"
+              class="btn btn--small"
               title="Email Jack about Freelance"
-            >I'm currently available for new projects &rarr;</a>
+            >I'm currently available for new projects &rarr;</g-link>
           </p>
         </slide-in>
 
@@ -36,10 +40,10 @@
       </div>
     </div>
 
-    <section class="bg-pink-lighter py-20 mt-20">
+    <section class="bg-black py-20 mt-20">
       <div class="container">
         <slide-in :reverse="true">
-          <h2>Selected Works</h2>
+          <h2 class="text-white">Selected Works</h2>
         </slide-in>
 
         <div class="flex flex-wrap row justify-between">
@@ -49,25 +53,23 @@
               :key="node._id"
               class="column w-12/12"
             >
-              <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-6">
-                <div class="text-sm tracking-wide uppercase text-grey-darker mt-1 lg:mt-0"></div>
-
+              <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-8">
                 <a
                   :href="node.link"
                   target="_blank"
                   rel="noopener"
                   :title="'Link to website for ' + node.title"
                 >
-                  <h3 class="mb-0 text-black font-semibold leading-loose">
+                  <h3 class="mb-0 text-white font-medium leading-loose">
                     <span>{{ node.title }}</span>
                   </h3>
                 </a>
 
-                <p class="mt-1 text-base" v-text="node.description"></p>
+                <p class="mt-1 text-base text-grey-100" v-text="node.description"></p>
 
-                <div class="mt-1">
+                <div class="mt-2">
                   <span
-                    class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-white mr-3"
+                    class="text-xs text-grey-darker tracking-wide uppercase py-1 px-2 rounded bg-site-lighter mr-3 font-medium"
                     v-for="(item, index) in node.tags"
                     :key="index"
                   >{{ item }}</span>
@@ -78,22 +80,22 @@
 
           <div class="w-12/12 lg:w-3/12">
             <slide-in :reverse="true">
-              <h4 class="mt-3 mb-2">Other Clients</h4>
+              <h4 class="mt-3 mb-2 text-white">Other Clients</h4>
               <p
-                class="text-base"
+                class="text-base text-grey-100"
               >Most of my work has been under NDA, but here are a few of the clients that I've worked with:</p>
-              <ul class="ml-1 pl-4">
+              <ul class="ml-1 pl-4 text-grey-100">
                 <li class="text-base mt-1">
-                  <span class="text-black">Travelteer</span>
+                  <span>Travelteer</span>
                 </li>
                 <li class="text-base mt-1">
-                  <span class="text-black">Capture Our Wedding</span>
+                  <span>Capture Our Wedding</span>
                 </li>
                 <li class="text-base mt-1">
-                  <span class="text-black">Pancake App</span>
+                  <span>Pancake App</span>
                 </li>
                 <li class="text-base mt-1">
-                  <span class="text-black">and more...</span>
+                  <span>and more...</span>
                 </li>
               </ul>
             </slide-in>
@@ -117,13 +119,10 @@
             >
               <router-link
                 :to="node.path"
-                class="column w-12/12 lg:w-10/12"
+                class="column w-12/12 lg:w-10/12 border-b-0 pb-0"
                 :title="'Link to post: ' + node.title"
               >
-                <h3
-                  v-html="node.title"
-                  class="mb-0 text-grey-darker font-semibold hover:text-black leading-loose"
-                />
+                <h3 v-html="node.title" class="mb-0 font-normal hover:text-site leading-loose" />
               </router-link>
 
               <div

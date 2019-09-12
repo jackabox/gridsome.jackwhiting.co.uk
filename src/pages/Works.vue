@@ -19,19 +19,19 @@
               <h3 v-html="node.title" class="mb-0 text-black font-semibold leading-loose" />
             </a>
 
-            <p class="mt-2 text-grey-darker text-base" v-text="node.description"></p>
+            <p class="mt-2 text-grey-darker" v-text="node.description"></p>
 
             <a
               :href="node.link"
               target="_blank"
               rel="noopener"
-              class="inline-block mt-1 text-black text-sm border-b border-pink hover:bg-pink-lighter hover:border-pink-lighter"
+              class="link text-base my-3 inline-block"
               :title="'Link to website for ' + node.title"
             >Visit Site &rarr;</a>
 
             <div class="mt-2">
               <span
-                class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-pink-lighter mr-3"
+                class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-site-lighter mr-3"
                 v-for="(item, index) in node.tags"
                 :key="index"
               >{{ item }}</span>

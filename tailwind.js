@@ -1,12 +1,17 @@
 let colors = {
   transparent: 'transparent',
 
-  black: '#000000',
+  black: '#2D3748',
   white: '#ffffff',
+  'grey-100': '#F7FAFC',
 
-  'grey-darker': '#555555',
+  'site-lighter': '#FAF5FF',
+  site: '#9F7AEA',
+  'site-darker': '#805AD5',
+
+  'grey-darker': '#718096',
   grey: '#9e9e9e',
-  'grey-lighter': '#dedede',
+  'grey-lighter': '#A0AEC0',
 
   'pink-darker': '#ff8ea3',
   pink: '#edd5d5',

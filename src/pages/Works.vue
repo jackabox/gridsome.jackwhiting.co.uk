@@ -71,7 +71,7 @@ export default {
   },
 
   metaInfo: {
-    title: 'Works',
+    title: 'Works |',
     meta: [
       {
         key: 'description',

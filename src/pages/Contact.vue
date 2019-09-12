@@ -139,7 +139,7 @@ export default {
   },
 
   metaInfo: {
-    title: 'Contact',
+    title: 'Contact |',
     meta: [
       {
         key: 'description',

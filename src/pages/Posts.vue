@@ -55,7 +55,7 @@ export default {
   },
 
   metaInfo: {
-    title: 'Posts',
+    title: 'Posts |',
     meta: [
       {
         key: 'description',

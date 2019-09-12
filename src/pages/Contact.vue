@@ -28,9 +28,22 @@
           </slide-in>
         </div>
 
-        <form name="contact" class="column w-12/12 md:w-7/12" method="POST" data-netlify="true">
+        <form
+          name="contact"
+          class="column w-12/12 md:w-7/12"
+          method="POST"
+          netlify-honeypot="dumbo-field"
+          data-netlify="true"
+        >
           <slide-in :reverse="true">
             <h4>Send a Message</h4>
+            <p class="hidden">
+              <label>
+                Don’t fill this out if you're human:
+                <input name="dumbo-field" />
+              </label>
+            </p>
+
             <p>
               <label>
                 <span class="block text-sm uppercase mb-3">Your Name:</span>

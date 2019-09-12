@@ -6,7 +6,7 @@
       <ul class="list-reset mt-5 flex flex-wrap row justify-between">
         <li
           v-for="({ node }, index) in $page.allWork.edges"
-          :key="node._id"
+          :key="node.id"
           class="column w-12/12 md:w-9/12"
         >
           <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-6">
@@ -48,7 +48,7 @@
     allWork (page: $page) {
       edges {
        node {
-          _id
+          id
           title
           date (format: "YYYY")
           description

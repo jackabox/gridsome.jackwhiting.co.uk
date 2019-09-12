@@ -2,27 +2,23 @@
   <div class="w-12/12 flex flex-col">
     <header class="fixed pin-x py-4 bg-white z-10">
       <div class="container flex items-center justify-between">
-        <g-link
-          class="heading-link text-black hover:text-site"
-          :to="{ name: 'home' }"
-          title="Link to home page"
-        >
-          <h1 class="text-base font-bold uppercase mb-0 mt-0 tracking-wide">{{ config.siteName }}</h1>
+        <g-link class="heading-link text-black hover:text-site" to="/" title="Link to home page">
+          <h1 class="text-base font-bold uppercase mb-0 mt-0 tracking-wide">Jack</h1>
         </g-link>
 
         <nav>
           <g-link
-            :to="{ name: 'works' }"
+            to="/works"
             class="ml-5 tracking-wide text-base text-grey-darker hover:text-black"
             title="View all works"
           >Works</g-link>
           <g-link
-            :to="{ name: 'posts' }"
+            to="/posts"
             class="ml-5 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
             title="View all posts"
           >Posts</g-link>
           <g-link
-            :to="{ name: 'contact' }"
+            to="/contact"
             class="ml-5 md:ml-7 tracking-wide text-base text-site hover:text-site-darker"
             title="Contact Me"
           >Get In Touch</g-link>
@@ -43,13 +39,32 @@
 </template>
 
 <script>
-import config from '~/.temp/config.js'
-
 export default {
-  computed: {
-    config() {
-      return config
-    }
+  metaInfo: {
+    script: [
+      {
+        type: 'application/ld+json',
+        json: {
+          '@context': 'https://schema.org/',
+          '@type': 'Person',
+          name: 'Jack Whiting',
+          url: 'https://jackwhiting.co.uk/',
+          image:
+            'https://jackwhiting.co.uk/assets/static/portrait.b269a45.7883773.jpg',
+          sameAs: [
+            'https://twitter.com/jackabox',
+            'https://www.linkedin.com/in/jack-whiting-0289a555',
+            'https://github.com/jackabox',
+            'https://jackwhiting.co.uk/'
+          ],
+          jobTitle: 'Freelance Web Developer',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'Jack Whiting'
+          }
+        }
+      }
+    ]
   }
 }
 </script>

@@ -20,7 +20,7 @@
 
           <p>
             <g-link
-              :to="{ name: 'contact' }"
+              to="/contact"
               class="btn btn--small"
               title="Email Jack about Freelance"
             >I'm currently available for new projects &rarr;</g-link>
@@ -111,19 +111,19 @@
         </slide-in>
 
         <ul class="list-reset mt-5">
-          <li v-for="({ node }, index) in $page.allPost.edges" :key="node._id" class>
+          <li v-for="({ node }, index) in $page.allPost.edges" :key="node.id" class>
             <slide-in
               :reverse="true"
               :delay="200 * parseInt(index)"
               class="my-3 flex flex-wrap justify-between row items-center"
             >
-              <router-link
+              <g-link
                 :to="node.path"
                 class="column w-12/12 lg:w-10/12 border-b-0 pb-0"
                 :title="'Link to post: ' + node.title"
               >
                 <h3 v-html="node.title" class="mb-0 font-normal hover:text-site leading-loose" />
-              </router-link>
+              </g-link>
 
               <div
                 class="column w-12/12 lg:w-2/12 text-sm tracking-wide uppercase text-grey-darker lg:text-right mt-1 lg:mt-0"
@@ -141,7 +141,7 @@
     allPost (page: $page, perPage: 5) {
       edges {
         node {
-          _id
+          id
           title
           date (format: "D MMM, YYYY")
           description
@@ -153,7 +153,7 @@
     allWork (page: $page, perPage: 4) {
       edges {
         node {
-          _id
+          id
           title
           date (format: "YYYY")
           tags
@@ -182,12 +182,12 @@ export default {
         key: 'description',
         name: 'description',
         content:
-          'Freelance Developer located in Nottingham, UK with over 10 years experience. Specialising in Laravel, Craft and Vue applications. Currently available for new projects.'
+          'Freelance Web Developer in Nottingham, UK with over 10 years experience working with WordPress, Laravel, Craft and Vue. Currently available for new projects.'
       },
       {
         name: 'keywords',
         content:
-          'Web,Developer,Web Developer,Freelance,Nottingham,PHP,Laravel,Vue,JavaScript,WordPress,Craft.'
+          'Web,Developer,Web Developer,Freelance,Nottingham,PHP,Laravel,Vue,JavaScript,WordPress,Craft,WooCommerce,Craft Commerce.'
       }
     ]
   }

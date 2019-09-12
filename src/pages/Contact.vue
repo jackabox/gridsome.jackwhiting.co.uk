@@ -54,20 +54,20 @@
               <p>
                 <label>
                   <span class="block text-sm uppercase mb-3">Your Name:</span>
-                  <input type="text" name="name" class="border" />
+                  <input type="text" name="name" class="border" v-model="formData.name" />
                 </label>
               </p>
               <p>
                 <label>
                   <span class="block text-sm uppercase mb-3">Your Email:</span>
-                  <input type="email" name="email" />
+                  <input type="email" name="email" v-model="formData.email" />
                 </label>
               </p>
               <p>
                 <label>
                   <span class="block text-sm uppercase mb-3">Budget:</span>
                   <div class="select">
-                    <select name="budget">
+                    <select name="budget" v-model="formData.budget">
                       <option value>Unsure/Don't have one</option>
                       <option value="£0 - £3,000">£0 - £3,000</option>
                       <option value="£3,000 - £6,000">£3,000 - £6,000</option>
@@ -80,7 +80,7 @@
               <p>
                 <label>
                   <span class="block text-sm uppercase mb-3">Project Details:</span>
-                  <textarea name="message"></textarea>
+                  <textarea name="message" v-model="formData.message"></textarea>
                 </label>
               </p>
               <p>

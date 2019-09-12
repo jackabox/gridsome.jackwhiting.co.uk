@@ -4,23 +4,23 @@
 
     <div class="container">
       <ul class="list-reset">
-        <li v-for="({node}, index) in $page.allPost.edges" :key="node._id" class="py-10">
+        <li v-for="({node}, index) in $page.allPost.edges" :key="node.id" class="py-10">
           <slide-in :reverse="true" :delay="200 * parseInt(index)">
-            <router-link :to="node.path" :title="'Link to post: ' + node.title">
+            <g-link :to="node.path" :title="'Link to post: ' + node.title">
               <h2 v-html="node.title" />
-            </router-link>
+            </g-link>
 
             <div class="mt-3 mb-2 text-sm tracking-wide uppercase text-grey-darker">{{ node.date }}</div>
 
             <div v-html="node.description" />
 
-            <router-link
+            <g-link
               :to="node.path"
               class="link text-base mt-5 inline-block block"
               :title="'Link to post: ' + node.title"
             >
               <span class>Read More</span>
-            </router-link>
+            </g-link>
           </slide-in>
         </li>
       </ul>
@@ -33,7 +33,7 @@
     allPost (page: $page) {
       edges {
         node {
-          _id
+          id
           title
           date (format: "D MMMM, YYYY")
           description

@@ -14,7 +14,7 @@ module.exports = {
       options: {
         path: 'content/posts/*.md',
         typeName: 'Post',
-        route: '/posts/:slug',
+        route: 'posts/:slug',
         remark: {
           plugins: ['@gridsome/remark-prismjs']
         }

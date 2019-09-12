@@ -139,13 +139,13 @@ export default {
   },
 
   metaInfo: {
-    title: 'Contact Me',
+    title: 'Contact |',
     meta: [
       {
         key: 'description',
         name: 'description',
         content:
-          'Want to get in touch? Use the contact form below to send me a message.'
+          'I am always happy to hear new about new enquiries and opportunities. Get in touch to discuss your next project.'
       }
     ]
   }

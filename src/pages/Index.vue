@@ -176,7 +176,7 @@ export default {
   },
 
   metaInfo: {
-    title: 'Jack Whiting | Freelance PHP and JS Web Developer | Nottingham',
+    title: '',
     meta: [
       {
         key: 'description',

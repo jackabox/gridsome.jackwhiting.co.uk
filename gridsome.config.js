@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Jack',
-  titleTemplate: `%s - Jack Whiting`,
+  titleTemplate: `%s Jack Whiting | Freelance Web Developer in Nottingham`,
 
   plugins: [
     {

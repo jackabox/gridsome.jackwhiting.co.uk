@@ -54,13 +54,13 @@
               <p>
                 <label>
                   <span class="block text-sm uppercase mb-3">Your Name:</span>
-                  <input type="text" name="name" class="border" v-model="formData.name" />
+                  <input type="text" name="name" class="border" v-model="formData.name" required />
                 </label>
               </p>
               <p>
                 <label>
                   <span class="block text-sm uppercase mb-3">Your Email:</span>
-                  <input type="email" name="email" v-model="formData.email" />
+                  <input type="email" name="email" v-model="formData.email" required />
                 </label>
               </p>
               <p>
@@ -80,7 +80,12 @@
               <p>
                 <label>
                   <span class="block text-sm uppercase mb-3">Project Details:</span>
-                  <textarea name="message" v-model="formData.message"></textarea>
+                  <textarea
+                    name="message"
+                    v-model="formData.message"
+                    required
+                    placeholder="Tell me a little about your project"
+                  ></textarea>
                 </label>
               </p>
               <p>

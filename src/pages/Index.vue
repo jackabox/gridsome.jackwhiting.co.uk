@@ -12,7 +12,7 @@
 
           <p
             class="mt-4"
-          >I specialise in crafting websites with PHP and JavaScript. A few of my favourite tools are Laravel, Craft and VueJS. I prefer to write sites using these, but I'm also happy to use other systems (such as WordPress) if there is a need for it.</p>
+          >I specialise in crafting websites with PHP and JavaScript. A few of my favourite tools are Laravel, Craft, Shopify, WordPress and VueJS. I make sure to use the best system for each individual project!</p>
 
           <p
             class="mt-4"

@@ -61,7 +61,7 @@
       </div>
     </section>
 
-    <div class="py-20">
+    <div class="mt-20">
       <div class="container">
         <slide-in :reverse="true">
           <h2>Recent Posts</h2>

@@ -5,7 +5,7 @@
         <h1 class="text-white">Why Hire Me?</h1>
         <div class="mt-3 mb-6 text-md text-white w-12/12 md:w-10/12">
           <p>If you’ve landed on this page you’re probably wondering what makes me different? Well for a start I believe that every website is unique and should be treated as such. Your business needs are unique and require a thought out, strategic, approach.</p>
-          <p>Whilst working together, I will take the time to go over what your project needs, what we can do to deliver the best product for you and any unique requirements you have. Together, we’ll work out the best technology and path for your website and strive to deliver something both beautiful and fit for purpose.</p>
+          <p>Whilst working together, I will take the time to go over what your project needs, what we can do to deliver the best product for you and any unique requirements you have. Next, we will work out the best technology for your website to make it stand out by delivering something both beautiful.</p>
         </div>
       </div>
     </slide-in>
@@ -14,7 +14,7 @@
       <h2 class="mb-5">What I Offer</h2>
       <p
         class="mb-10 pb-5 w-12/12 lg:w-9/12"
-      >Whether it's a design, bulding a website, a mobile application or hosting. I've had experience with all elements of a website's lifecycle.</p>
+      >Whatever your needs I can help you out with your journey, whether it's designing or building a website, creating mobile applications or providing a stellar hosting platform.</p>
 
       <what-offer />
     </slide-in>
@@ -24,7 +24,7 @@
         <h2 class="mb-4 text-black">Technologies</h2>
         <p
           class="text-black lg:w-10/12"
-        >I predominantely work with PHP and JavaScript and have grown to use a set of tools which helps me to deliver the most appropriate solution to each unique website. Hover over the technologies on the side to find out more about what I can provide.</p>
+        >I predominantly work with PHP and JavaScript and over time have grown to become fond of a set of technologies which help me to deliver a first-class solution to each website's unique requirements. Click through the list below to learn about what each can be used for.</p>
 
         <div class="py-10 mt-10 border-t-2" style="border-color: #E2E8F0">
           <technology-information />

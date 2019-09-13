@@ -12,6 +12,13 @@
             class="ml-5 tracking-wide text-base text-grey-darker hover:text-black"
             title="View all works"
           >Works</g-link>
+
+          <g-link
+            to="/services"
+            class="ml-5 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
+            title="View my services"
+          >Why Hire Me?</g-link>
+
           <g-link
             to="/posts"
             class="ml-5 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"

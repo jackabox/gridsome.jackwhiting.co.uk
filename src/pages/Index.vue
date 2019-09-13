@@ -43,63 +43,20 @@
     <section class="bg-black py-20 mt-20">
       <div class="container">
         <slide-in :reverse="true">
-          <h2 class="text-white">Selected Works</h2>
+          <h2 class="text-white mb-10 pb-5 text-center">Recent Works</h2>
         </slide-in>
 
         <div class="flex flex-wrap row justify-between">
-          <ul class="list-reset w-12/12 lg:w-8/12 mt-6">
-            <li
-              v-for="({ node }, index) in $page.allWork.edges"
-              :key="node._id"
-              class="column w-12/12"
-            >
-              <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-8">
-                <a
-                  :href="node.link"
-                  target="_blank"
-                  rel="noopener"
-                  :title="'Link to website for ' + node.title"
-                >
-                  <h3 class="mb-0 text-white font-medium leading-loose">
-                    <span>{{ node.title }}</span>
-                  </h3>
-                </a>
+          <single-item
+            v-for="({ node }) in $page.allWork.edges"
+            :key="node.id"
+            class="column w-12/12 lg:w-6/12"
+            v-bind="node"
+          />
+        </div>
 
-                <p class="mt-1 text-base text-grey-100" v-text="node.description"></p>
-
-                <div class="mt-2">
-                  <span
-                    class="text-xs text-grey-darker tracking-wide uppercase py-1 px-2 rounded bg-site-lighter mr-3 font-medium"
-                    v-for="(item, index) in node.tags"
-                    :key="index"
-                  >{{ item }}</span>
-                </div>
-              </slide-in>
-            </li>
-          </ul>
-
-          <div class="w-12/12 lg:w-3/12">
-            <slide-in :reverse="true">
-              <h4 class="mt-3 mb-2 text-white">Other Clients</h4>
-              <p
-                class="text-base text-grey-100"
-              >Most of my work has been under NDA, but here are a few of the clients that I've worked with:</p>
-              <ul class="ml-1 pl-4 text-grey-100">
-                <li class="text-base mt-1">
-                  <span>Travelteer</span>
-                </li>
-                <li class="text-base mt-1">
-                  <span>Capture Our Wedding</span>
-                </li>
-                <li class="text-base mt-1">
-                  <span>Pancake App</span>
-                </li>
-                <li class="text-base mt-1">
-                  <span>and more...</span>
-                </li>
-              </ul>
-            </slide-in>
-          </div>
+        <div class="text-center">
+          <g-link to="/works" class="btn">View More Works</g-link>
         </div>
       </div>
     </section>
@@ -150,11 +107,12 @@
       }
     }
 
-    allWork (page: $page, perPage: 4) {
+    allWork (page: $page, perPage: 2) {
       edges {
         node {
           id
           title
+          image
           date (format: "YYYY")
           tags
           description
@@ -168,11 +126,13 @@
 <script>
 import ImageSwipeLeft from '~/components/Animation/ImageSwipeLeft'
 import SlideIn from '~/components/Animation/SlideIn'
+import SingleItem from '~/components/Work/SingleItemDark'
 
 export default {
   components: {
     ImageSwipeLeft,
-    SlideIn
+    SlideIn,
+    SingleItem
   },
 
   metaInfo: {

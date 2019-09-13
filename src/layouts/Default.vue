@@ -1,35 +1,43 @@
 <template>
   <div class="w-12/12 flex flex-col">
     <header class="fixed pin-x py-4 bg-white z-10">
-      <div class="container flex items-center justify-between">
-        <g-link class="heading-link text-black hover:text-site" to="/" title="Link to home page">
-          <h1 class="text-base font-bold uppercase mb-0 mt-0 tracking-wide">Jack</h1>
-        </g-link>
+      <div class="container">
+        <div class="flex-wrap flex row items-center justify-between">
+          <div class="column w-12/12 md:w-3/12">
+            <g-link
+              class="heading-link text-black hover:text-site"
+              to="/"
+              title="Link to home page"
+            >
+              <h1 class="text-base font-bold uppercase mb-0 mt-0 tracking-wide">Jack</h1>
+            </g-link>
+          </div>
 
-        <nav>
-          <g-link
-            to="/works"
-            class="ml-5 tracking-wide text-base text-grey-darker hover:text-black"
-            title="View all works"
-          >Works</g-link>
+          <nav class="column w-12/12 md:w-9/12 mt-1 md:text-right">
+            <g-link
+              to="/works"
+              class="md:ml-5 tracking-wide text-base text-grey-darker hover:text-black"
+              title="View all works"
+            >Works</g-link>
 
-          <g-link
-            to="/services"
-            class="ml-5 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
-            title="View my services"
-          >Why Hire Me?</g-link>
+            <g-link
+              to="/services"
+              class="ml-3 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
+              title="View my services"
+            >Why Hire Me?</g-link>
 
-          <g-link
-            to="/posts"
-            class="ml-5 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
-            title="View all posts"
-          >Posts</g-link>
-          <g-link
-            to="/contact"
-            class="ml-5 md:ml-7 tracking-wide text-base text-site hover:text-site-darker"
-            title="Contact Me"
-          >Get In Touch</g-link>
-        </nav>
+            <g-link
+              to="/posts"
+              class="ml-3 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
+              title="View all posts"
+            >Posts</g-link>
+            <g-link
+              to="/contact"
+              class="ml-3 md:ml-7 tracking-wide text-base text-site hover:text-site-darker"
+              title="Contact Me"
+            >Get In Touch</g-link>
+          </nav>
+        </div>
       </div>
     </header>
 

@@ -7,7 +7,7 @@
         <single-item
           v-for="({ node }) in $page.allWork.edges"
           :key="node.id"
-          class="column w-12/12 lg:w-6/12"
+          class="column w-12/12 md:w-6/12"
           v-bind="node"
         />
       </div>
@@ -16,17 +16,17 @@
     <section class="mt-10 mb-10 container">
       <h3 class="font-medium text-center">Other Companies I've Worked With</h3>
 
-      <div class="flex list-reset row mt-10 justify-between">
-        <div>
+      <div class="flex flex-wrap row mt-10 justify-between">
+        <div class="column w-6/12 md:w-3/12 text-center">
           <g-image src="~/assets/img/nottingham-council-logo.png" class="greyscale" />
         </div>
-        <div>
+        <div class="column w-6/12 md:w-3/12 text-center">
           <g-image src="~/assets/img/totaljobs-logo.png" class="greyscale" />
         </div>
-        <div>
+        <div class="column w-6/12 md:w-3/12 text-center">
           <g-image src="~/assets/img/capture-logo.png" class="greyscale" />
         </div>
-        <div>
+        <div class="column w-6/12 md:w-3/12 text-center">
           <g-image src="~/assets/img/kruger-logo.png" class="greyscale" />
         </div>
       </div>

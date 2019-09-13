@@ -27,7 +27,7 @@
           </p>
         </slide-in>
 
-        <div class="w-full md:w-6/12 mt-5 column">
+        <div class="w-full md:w-6/12 mt-10 md:mt-5 column">
           <image-swipe-left>
             <g-image
               src="~/assets/img/portrait.jpg"
@@ -40,10 +40,10 @@
       </div>
     </div>
 
-    <section class="bg-black py-20 mt-20">
+    <section class="bg-black py-12 md:py-20 mt-10 md:mt-20">
       <div class="container">
         <slide-in :reverse="true">
-          <h2 class="text-white mb-10 pb-5 text-center">Recent Works</h2>
+          <h2 class="text-white mb-6 md:mb-10 pb-5 text-center">Recent Works</h2>
         </slide-in>
 
         <div class="flex flex-wrap row justify-between">

@@ -1,7 +1,7 @@
 <template>
   <div>
     <image-swipe-left>
-      <g-image :src="image" :alt="'Image for ' + title" />
+      <g-image :src="image" :alt="'Image for ' + title" class="w-12/12" />
     </image-swipe-left>
 
     <slide-in :reverse="true" :delay="200" class="pt-4 pb-12 flex flex-col">

@@ -37,10 +37,57 @@
       <slot />
     </div>
 
-    <footer class="container">
-      <p
-        class="uppercase text-xs mt-20 mb-10 tracking-wide text-grey"
-      >&copy; Jack 2019 (and forever)</p>
+    <footer class="bg-black p-12 mt-20">
+      <div class="container">
+        <div class="row flex flex-wrap justify-between">
+          <div class="column w-7/12">
+            <h3 class="text-white font-medium mb-3">Like what you see?</h3>
+
+            <p
+              class="text-grey-100"
+            >I'm currently available for new web development work and would love to work together on your next project. Get in touch with me to discuss your projects details</p>
+
+            <p class="text-white">
+              <g-link
+                to="/contact"
+                class="btn btn"
+                title="Get in touch with Jack about Freelance"
+              >Get In Touch &rarr;</g-link>
+            </p>
+          </div>
+
+          <div class="column w-3/12 flex flex-col">
+            <nav>
+              <g-link
+                to="/works"
+                class="block mb-2 tracking-wide text-base text-grey"
+                title="View all works"
+              >Works</g-link>
+
+              <g-link
+                to="/services"
+                class="block mb-2 tracking-wide text-base text-grey"
+                title="View my services"
+              >Why Hire Me?</g-link>
+
+              <g-link
+                to="/posts"
+                class="block mb-2 tracking-wide text-base text-grey"
+                title="View all posts"
+              >Posts</g-link>
+              <g-link
+                to="/contact"
+                class="block mb-2 tracking-wide text-base text-grey"
+                title="Contact Me"
+              >Get In Touch</g-link>
+            </nav>
+
+            <p
+              class="uppercase text-xs tracking-wide text-grey mt-auto"
+            >&copy; Jack 2019 (and forever)</p>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </template>

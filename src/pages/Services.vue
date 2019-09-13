@@ -1,83 +1,93 @@
 <template>
   <Layout>
-    <div class="container mt-0 pt-30">
-      <div class="flex flex-wrap items-center row">
-        <slide-in :reverse="true" :delay="-600" class="w-12/12 md:w-7/12 column">
-          <h2 class="mb-4">About Me</h2>
-          <p>Hey, I am a Freelance Web Developer specialising in carefully crafted websites using Laravel, Craft and WordPress. I'm located in Nottingham, UK with over 10 years experience.</p>
+    <slide-in :delay="0" class="bg-black pt-30 lg:pt-40 pb-6 lg:pb-10 mb-10 lg:mb-20 z-0">
+      <div class="container">
+        <h1 class="text-white">Why Hire Me?</h1>
+        <div class="mt-3 mb-6 text-md text-white w-12/12 md:w-10/12">
           <p>If you’ve landed on this page you’re probably wondering what makes me different? Well for a start I believe that every website is unique and should be treated as such. Your business needs are unique and require a thought out, strategic, approach.</p>
           <p>Whilst working together, I will take the time to go over what your project needs, what we can do to deliver the best product for you and any unique requirements you have. Together, we’ll work out the best technology and path for your website and strive to deliver something both beautiful and fit for purpose.</p>
-
-          <p>
-            <g-link
-              to="/contact"
-              class="btn btn--small"
-              title="Email Jack about Freelance"
-            >I'm currently available for new projects &rarr;</g-link>
-          </p>
-        </slide-in>
-
-        <div class="w-full md:w-6/12 mt-5 column"></div>
+        </div>
       </div>
-    </div>
+    </slide-in>
 
-    <div class="container mt-20">
-      <h2 class="mb-10 text-center">What I Offer</h2>
+    <div class="container">
+      <h2 class="mb-5">What I Offer</h2>
+      <p
+        class="mb-10 pb-5 w-12/12 lg:w-9/12"
+      >Whether it's a design, bulding a website, a mobile application or hosting. I've had experience with all elements of a website's lifecycle.</p>
 
       <div class="row flex flex-wrap">
         <div class="column w-6/12 md:w-4/12 mb-10">
-          <h4>Web Design</h4>
+          <IconWebDesign />
+          <h4 class="mt-3">Web Design</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
+        </div>
+
+        <div class="column w-6/12 md:w-4/12 mb-10">
+          <IconWebDesign />
+          <h4 class="mt-3">Web Developemnt</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
+        </div>
+
+        <div class="column w-6/12 md:w-4/12 mb-10">
+          <IconWebDesign />
+          <h4 class="mt-3">E-commerce</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
         </div>
         <div class="column w-6/12 md:w-4/12 mb-10">
-          <h4>Web Developemnt</h4>
+          <IconWebDesign />
+          <h4 class="mt-3">Mobile Applications</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
         </div>
         <div class="column w-6/12 md:w-4/12 mb-10">
-          <h4>E-commerce</h4>
+          <IconWebDesign />
+          <h4 class="mt-3">Single Page Applications</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
         </div>
         <div class="column w-6/12 md:w-4/12 mb-10">
-          <h4>Mobile Applications</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
-        </div>
-        <div class="column w-6/12 md:w-4/12">
-          <h4>Single Page Applications</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
-        </div>
-        <div class="column w-6/12 md:w-4/12">
-          <h4>Hosting &amp; After-care</h4>
+          <IconWebDesign />
+          <h4 class="mt-3">Hosting &amp; After-care</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex.</p>
         </div>
       </div>
     </div>
 
-    <section class="bg-black py-20 mt-10">
+    <section class="bg-grey-100 py-20 mt-10">
       <div class="container">
-        <h1 class="text-white">Services</h1>
+        <h2 class="mb-4 text-black">Services</h2>
         <p
-          class="text-white"
+          class="text-black lg:w-10/12"
         >I predominantely work with PHP and JavaScript and have grown to use a set of tools which helps me to deliver the most appropriate solution to each unique website. Hover over the technologies on the side to find out more about what I can provide.</p>
 
-        <div class="row mt-10 flex flex-wrap">
-          <div class="column w-12/12 md:w-3/12">
-            <ul class="list-reset">
-              <li
-                class="service-item text-white text-2xl font-medium cursor-pointer"
-                :class="{ 'opacity-50 inactive': index != currentService }"
-                v-for="(service, index) in services"
-                :key="index"
-                v-text="service.title"
-                @click="changeCurrentService(index)"
-              ></li>
-            </ul>
-          </div>
-          <div class="w-12/12 md:w-9/12 column text-white">
-            <transition name="fade" v-for="(service, index) in services" :key="index">
-              <div v-show="index === currentService" v-html="service.content"></div>
-            </transition>
+        <div class="py-10 mt-10 border-t-2" style="border-color: #E2E8F0">
+          <div class="row flex flex-wrap">
+            <div class="column w-12/12 md:w-3/12">
+              <ul class="list-reset">
+                <li
+                  class="service-item text-black text-2xl font-medium cursor-pointer"
+                  :class="{ 'opacity-50 inactive': index != currentService }"
+                  v-for="(service, index) in services"
+                  :key="index"
+                  v-text="service.title"
+                  @click="changeCurrentService(index)"
+                ></li>
+              </ul>
+            </div>
+            <div class="w-12/12 md:w-9/12 column text-black">
+              <transition name="fade" v-for="(service, index) in services" :key="index">
+                <div v-show="index === currentService" v-html="service.content" class="content"></div>
+              </transition>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="mt-20 container">
+      <div class="w-12/12 lg:w-10/12 mx-auto">
+        <h3 class="font-medium mb-10">Don't just take my word for it...</h3>
+
+        <testimonial-slider />
       </div>
     </section>
   </Layout>
@@ -86,13 +96,27 @@
 <script>
 import PageHeader from '~/components/PageHeader'
 import SlideIn from '~/components/Animation/SlideIn'
+import ImageSwipeLeft from '~/components/Animation/ImageSwipeLeft'
 import FreelanceWork from '~/components/CTA/FreelanceWork'
+import TestimonialSlider from '~/components/Services/TestimonialSlider'
+
+// SVG
+import IconAppDev from '~/assets/svg/app-dev.svg'
+import IconWebDev from '~/assets/svg/web-dev.svg'
+import IconWebDesign from '~/assets/svg/web-design.svg'
+import IconDude from '~/assets/svg/dude.svg'
 
 export default {
   components: {
     PageHeader,
     SlideIn,
-    FreelanceWork
+    ImageSwipeLeft,
+    FreelanceWork,
+    TestimonialSlider,
+    IconAppDev,
+    IconWebDev,
+    IconWebDesign,
+    IconDude
   },
 
   data() {
@@ -170,5 +194,11 @@ export default {
 
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+</style>
+
+<style lang="postcss">
+.content p {
+  font-size: 1rem;
 }
 </style>

@@ -37,7 +37,6 @@
             </slide-in>
           </li>
         </ul>
-        <freelance-work />
       </div>
     </div>
   </Layout>
@@ -63,13 +62,11 @@
 <script>
 import PageHeader from '~/components/PageHeader'
 import SlideIn from '~/components/Animation/SlideIn'
-import FreelanceWork from '~/components/CTA/FreelanceWork'
 
 export default {
   components: {
     PageHeader,
-    SlideIn,
-    FreelanceWork
+    SlideIn
   },
 
   metaInfo: {

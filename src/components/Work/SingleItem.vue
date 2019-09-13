@@ -4,7 +4,7 @@
       <g-image :src="image" :alt="'Image for ' + title" class="w-12/12" />
     </image-swipe-left>
 
-    <slide-in :reverse="true" :delay="200" class="pt-4 pb-12 flex flex-col">
+    <slide-in :reverse="true" :delay="50" class="pt-4 pb-12 flex flex-col">
       <div>
         <span
           class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-site-lighter mr-3"

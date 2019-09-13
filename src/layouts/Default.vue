@@ -37,10 +37,10 @@
       <slot />
     </div>
 
-    <footer class="bg-black p-12 mt-20">
+    <footer class="bg-black py-12 mt-20">
       <div class="container">
         <div class="row flex flex-wrap justify-between">
-          <div class="column w-7/12">
+          <div class="column w-12/12 md:w-7/12 mb-6 md:mb-0">
             <h3 class="text-white font-medium mb-3">Like what you see?</h3>
 
             <p
@@ -56,7 +56,7 @@
             </p>
           </div>
 
-          <div class="column w-3/12 flex flex-col">
+          <div class="column w-12/12 md:w-3/12 flex flex-col">
             <nav>
               <g-link
                 to="/works"

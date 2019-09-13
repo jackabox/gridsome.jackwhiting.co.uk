@@ -5,7 +5,7 @@
     items="1"
     mode="gallery"
     :controls="false"
-    :autoplay-timeout="8000"
+    :autoplay-timeout="9000"
     :autoplay="true"
     :autoplay-button="false"
     :autoplay-hover-pause="true"

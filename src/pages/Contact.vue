@@ -124,6 +124,7 @@ export default {
         )
         .join('&')
     },
+
     handleSubmit(e) {
       fetch('/', {
         method: 'POST',

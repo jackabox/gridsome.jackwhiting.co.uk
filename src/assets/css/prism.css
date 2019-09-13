@@ -38,10 +38,10 @@ code[class*='language-'] ::selection {
 
 /* Code blocks */
 pre[class*='language-'] {
-  padding: 1em;
+  padding: 1.5em;
   margin: 0.5em 0;
   overflow: auto;
-  border: 1px solid config('colors.black');
+  background: config('colors.grey-100');
 }
 
 :not(pre) > code[class*='language-'],

@@ -105,15 +105,19 @@ a.link:focus {
   @apply border-white text-site-darker;
 }
 
-.btn {
-  @apply bg-site inline-flex text-base px-4 py-2 tracking-wide text-white rounded-sm;
+.btn,
+a.btn {
+  @apply bg-site inline-flex text-base px-4 py-2 tracking-wide text-white rounded-sm border-none;
   transition: 0.3s all ease-in-out;
 }
 
+a.btn--small,
 .btn--small {
   @apply px-2 py-1;
 }
 
+a.btn:hover,
 .btn:hover {
+  @apply text-white;
   @apply bg-site-darker;
 }

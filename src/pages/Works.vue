@@ -3,42 +3,42 @@
     <page-header title="Works" />
 
     <div class="container">
-      <ul class="list-reset mt-5 flex flex-wrap row justify-between">
-        <li
-          v-for="({ node }, index) in $page.allWork.edges"
-          :key="node.id"
-          class="column w-12/12 md:w-9/12"
-        >
-          <slide-in :reverse="true" :delay="200 * parseInt(index)" class="mt-3 mb-6">
-            <a
-              :href="node.link"
-              target="_blank"
-              rel="noopener"
-              :title="'Link to website for ' + node.title"
-            >
-              <h3 v-html="node.title" class="mb-0 text-black font-semibold leading-loose" />
-            </a>
+      <div class>
+        <ul class="list-reset mt-5 mb-10 lg:mb-20">
+          <li v-for="({ node }, index) in $page.allWork.edges" :key="node.id">
+            <slide-in :reverse="true" :delay="200 * parseInt(index)" class="pt-4 pb-8">
+              <div class="mb-2">
+                <span
+                  class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-site-lighter mr-3"
+                  v-for="(item, index) in node.tags"
+                  :key="index"
+                >{{ item }}</span>
 
-            <p class="mt-2 text-grey-darker" v-text="node.description"></p>
+                <a
+                  :href="node.link"
+                  target="_blank"
+                  rel="noopener"
+                  :title="'Link to website for ' + node.title"
+                  class="block mt-2"
+                >
+                  <h2 v-html="node.title" class="mb-0 text-black font-semibold leading-loose" />
+                </a>
 
-            <a
-              :href="node.link"
-              target="_blank"
-              rel="noopener"
-              class="link text-base my-3 inline-block"
-              :title="'Link to website for ' + node.title"
-            >Visit Site &rarr;</a>
+                <p class="mt-2 text-grey-darker" v-text="node.description"></p>
 
-            <div class="mt-2">
-              <span
-                class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-site-lighter mr-3"
-                v-for="(item, index) in node.tags"
-                :key="index"
-              >{{ item }}</span>
-            </div>
-          </slide-in>
-        </li>
-      </ul>
+                <a
+                  :href="node.link"
+                  target="_blank"
+                  rel="noopener"
+                  class="link text-base mt-3 inline-block"
+                  :title="'Link to website for ' + node.title"
+                >Visit Site &rarr;</a>
+              </div>
+            </slide-in>
+          </li>
+        </ul>
+        <freelance-work />
+      </div>
     </div>
   </Layout>
 </template>
@@ -63,11 +63,13 @@
 <script>
 import PageHeader from '~/components/PageHeader'
 import SlideIn from '~/components/Animation/SlideIn'
+import FreelanceWork from '~/components/CTA/FreelanceWork'
 
 export default {
   components: {
     PageHeader,
-    SlideIn
+    SlideIn,
+    FreelanceWork
   },
 
   metaInfo: {

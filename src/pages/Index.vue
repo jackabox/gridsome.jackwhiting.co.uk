@@ -133,6 +133,10 @@
         </ul>
       </div>
     </div>
+
+    <div class="container">
+      <freelance-work />
+    </div>
   </Layout>
 </template>
 
@@ -168,11 +172,13 @@
 <script>
 import ImageSwipeLeft from '~/components/Animation/ImageSwipeLeft'
 import SlideIn from '~/components/Animation/SlideIn'
+import FreelanceWork from '~/components/CTA/FreelanceWork'
 
 export default {
   components: {
     ImageSwipeLeft,
-    SlideIn
+    SlideIn,
+    FreelanceWork
   },
 
   metaInfo: {

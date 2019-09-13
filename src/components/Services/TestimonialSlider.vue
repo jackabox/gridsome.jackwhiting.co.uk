@@ -1,20 +1,22 @@
 <template>
-  <tiny-slider
-    :mouse-drag="true"
-    :loop="true"
-    items="1"
-    mode="gallery"
-    :controls="false"
-    :autoplay-timeout="9000"
-    :autoplay="true"
-    :autoplay-button="false"
-    :autoplay-hover-pause="true"
-  >
-    <div v-for="(item, index) in testimonials" :key="index" class="w-12/12">
-      <p class="text-xl opacity-75" v-text="item.content" />
-      <p class="font-medium italic">&mdash; {{ item.client }}</p>
-    </div>
-  </tiny-slider>
+  <ClientOnly>
+    <tiny-slider
+      :mouse-drag="true"
+      :loop="true"
+      items="1"
+      mode="gallery"
+      :controls="false"
+      :autoplay-timeout="9000"
+      :autoplay="true"
+      :autoplay-button="false"
+      :autoplay-hover-pause="true"
+    >
+      <div v-for="(item, index) in testimonials" :key="index" class="w-12/12">
+        <p class="text-xl opacity-75" v-text="item.content" />
+        <p class="font-medium italic">&mdash; {{ item.client }}</p>
+      </div>
+    </tiny-slider>
+  </ClientOnly>
 </template>
 
 <script>

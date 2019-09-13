@@ -6,8 +6,6 @@
       <slide-in :reverse="true" :delay="200" class="article">
         <div class="mb-10 lg:mb-20 content" v-html="$page.post.content" />
       </slide-in>
-
-      <freelance-work />
     </div>
   </Layout>
 </template>
@@ -15,13 +13,11 @@
 <script>
 import PageHeader from '~/components/PageHeader'
 import SlideIn from '~/components/Animation/SlideIn'
-import FreelanceWork from '~/components/CTA/FreelanceWork'
 
 export default {
   components: {
     PageHeader,
-    SlideIn,
-    FreelanceWork
+    SlideIn
   },
 
   metaInfo() {

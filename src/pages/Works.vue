@@ -1,45 +1,36 @@
 <template>
   <Layout>
-    <page-header title="Works" />
+    <page-header title="Selected Works" />
 
     <div class="container">
-      <div class>
-        <ul class="list-reset mt-5 mb-10 lg:mb-20">
-          <li v-for="({ node }, index) in $page.allWork.edges" :key="node.id">
-            <slide-in :reverse="true" :delay="200 * parseInt(index)" class="pt-4 pb-8">
-              <div class="mb-2">
-                <span
-                  class="text-xs tracking-wide uppercase text-grey-darker py-1 px-2 rounded bg-site-lighter mr-3"
-                  v-for="(item, index) in node.tags"
-                  :key="index"
-                >{{ item }}</span>
-
-                <a
-                  :href="node.link"
-                  target="_blank"
-                  rel="noopener"
-                  :title="'Link to website for ' + node.title"
-                  class="block mt-2"
-                >
-                  <h2 v-html="node.title" class="mb-0 text-black font-semibold leading-loose" />
-                </a>
-
-                <p class="mt-2 text-grey-darker" v-text="node.description"></p>
-
-                <a
-                  :href="node.link"
-                  target="_blank"
-                  rel="noopener"
-                  class="link text-base mt-3 inline-block"
-                  :title="'Link to website for ' + node.title"
-                >Visit Site &rarr;</a>
-              </div>
-            </slide-in>
-          </li>
-        </ul>
-        <freelance-work />
+      <div class="mt-5 mb-10 lg:mb-20 flex row flex-wrap">
+        <single-item
+          v-for="({ node }) in $page.allWork.edges"
+          :key="node.id"
+          class="column w-12/12 md:w-6/12"
+          v-bind="node"
+        />
       </div>
     </div>
+
+    <section class="mt-10 mb-10 container">
+      <h3 class="font-medium text-center">Other Companies I've Worked With</h3>
+
+      <div class="flex flex-wrap row mt-10 justify-between">
+        <div class="column w-6/12 md:w-3/12 text-center">
+          <g-image src="~/assets/img/nottingham-council-logo.png" class="greyscale" />
+        </div>
+        <div class="column w-6/12 md:w-3/12 text-center">
+          <g-image src="~/assets/img/totaljobs-logo.png" class="greyscale" />
+        </div>
+        <div class="column w-6/12 md:w-3/12 text-center">
+          <g-image src="~/assets/img/capture-logo.png" class="greyscale" />
+        </div>
+        <div class="column w-6/12 md:w-3/12 text-center">
+          <g-image src="~/assets/img/kruger-logo.png" class="greyscale" />
+        </div>
+      </div>
+    </section>
   </Layout>
 </template>
 
@@ -50,6 +41,7 @@
        node {
           id
           title
+          image
           date (format: "YYYY")
           description
           tags
@@ -63,13 +55,13 @@
 <script>
 import PageHeader from '~/components/PageHeader'
 import SlideIn from '~/components/Animation/SlideIn'
-import FreelanceWork from '~/components/CTA/FreelanceWork'
+import SingleItem from '~/components/Work/SingleItem'
 
 export default {
   components: {
     PageHeader,
     SlideIn,
-    FreelanceWork
+    SingleItem
   },
 
   metaInfo: {
@@ -85,3 +77,14 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.greyscale {
+  filter: grayscale(100);
+  transition: 0.3s all ease-in-out;
+}
+
+.greyscale:hover {
+  filter: none;
+}
+</style>

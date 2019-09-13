@@ -18,16 +18,16 @@
 
       <div class="flex flex-wrap row mt-10 justify-between">
         <div class="column w-6/12 md:w-3/12 text-center">
-          <g-image src="~/assets/img/nottingham-council-logo.png" class="greyscale" />
+          <g-image src="~/assets/img/nottingham-council-logo.png" class="greyscale w-12/12 h-auto" />
         </div>
         <div class="column w-6/12 md:w-3/12 text-center">
-          <g-image src="~/assets/img/totaljobs-logo.png" class="greyscale" />
+          <g-image src="~/assets/img/totaljobs-logo.png" class="greyscale w-12/12 h-auto" />
         </div>
         <div class="column w-6/12 md:w-3/12 text-center">
-          <g-image src="~/assets/img/capture-logo.png" class="greyscale" />
+          <g-image src="~/assets/img/capture-logo.png" class="greyscale w-12/12 h-auto" />
         </div>
         <div class="column w-6/12 md:w-3/12 text-center">
-          <g-image src="~/assets/img/kruger-logo.png" class="greyscale" />
+          <g-image src="~/assets/img/kruger-logo.png" class="greyscale w-12/12 h-auto" />
         </div>
       </div>
     </section>

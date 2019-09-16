@@ -84,7 +84,7 @@ export default {
 </style>
 
 <style lang="postcss">
-.content p {
+.info p {
   font-size: 1rem;
 }
 </style>

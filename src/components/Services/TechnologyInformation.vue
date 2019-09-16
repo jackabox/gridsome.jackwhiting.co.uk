@@ -17,7 +17,7 @@
 
     <div class="w-12/12 md:w-9/12 column text-black">
       <transition name="fade" v-for="(service, index) in services" :key="index">
-        <div v-show="index === currentService" v-html="service.content" class="mt-1 content"></div>
+        <div v-show="index === currentService" v-html="service.content" class="mt-1 info"></div>
       </transition>
     </div>
   </div>

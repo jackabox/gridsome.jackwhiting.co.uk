@@ -1,14 +1,13 @@
 ---
-title: Handling SEO Redirects in a Laravel Application via Files and/or Database
+title: Handling Redirects in a Laravel Application
 slug: handling-seo-redirects-in-a-laravel-application
 date: 2019-08-14 11:00:00
-description: 'Utilising a Spatie package, we''re going to setup a way to handle redirects
-  (including wildcards) through a config file and/or the database. '
+description: "Most websites will need to manage their redirects at some point. For this, we're going to utilise a Spatie package to read redirects from a configuration file and/or a database table."
 tags:
-- laravel
-- seo
-
+  - laravel
+  - seo
 ---
+
 In this article, we're going to talk about an easy way to manage our redirects within a Laravel application. The following will allow for the storing of redirects in a database (to hook into Nova, or another CRUD system) and also the reading of redirects from a config file.
 
 A lot of the hard work has been done for us by the wonderful team at Spatie whom have produced a redirector package which allows for route params to be read and parsed. You can find this package at [https://github.com/spatie/laravel-missing-page-redirector]().

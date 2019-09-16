@@ -70,3 +70,7 @@ serverMiddleware: [
 ```
 
 Recompile the code and check that everything is working.
+
+#### Bonus
+
+If you need to take the redirects a bit further or if you don't mind using third party packages there is an awesome package available at [https://github.com/nuxt-community/redirect-module](https://github.com/nuxt-community/redirect-module) that can handle this for you.

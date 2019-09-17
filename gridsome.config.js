@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Jack',
+  siteUrl: 'https://jackwhiting.co.uk',
   titleTemplate: `%s Jack Whiting | Freelance Web Developer in Nottingham`,
 
   plugins: [
@@ -47,6 +48,44 @@ module.exports = {
         whitelist: ['pre', 'code', 'a', 'html', 'body', 'markdown'],
         whitelistPatterns: [/^language/],
         whitelistPatternsChildren: [/^language/]
+      }
+    },
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: ['Post'],
+        feedOptions: {
+          title: 'Jack Whiting - Posts',
+          feed_url: 'https://jackwhiting.co.uk/rss.xml',
+          site_url: 'https://jackwhiting.co.uk'
+        },
+        latest: true,
+        feedItemOptions: node => ({
+          title: node.title,
+          date: node.date,
+          description: node.description,
+          url: 'https://jackwhiting.co.uk./posts/' + node.slug
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000,
+        config: {
+          '/posts/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/works': {
+            changefreq: 'monthly',
+            priority: 0.7
+          }
+        }
       }
     }
   ],

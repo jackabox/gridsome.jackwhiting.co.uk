@@ -64,7 +64,7 @@ module.exports = {
           title: node.title,
           date: node.date,
           description: node.description,
-          url: 'https://jackwhiting.co.uk./posts/' + node.slug
+          url: 'https://jackwhiting.co.uk/posts/' + node.slug
         }),
         output: {
           dir: './static',

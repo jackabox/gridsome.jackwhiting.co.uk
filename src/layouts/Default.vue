@@ -15,24 +15,24 @@
 
           <nav class="column w-12/12 md:w-9/12 mt-1 md:text-right">
             <g-link
-              to="/works"
+              to="/works/"
               class="md:ml-5 tracking-wide text-base text-grey-darker hover:text-black"
               title="View all works"
             >Works</g-link>
 
             <g-link
-              to="/services"
+              to="/services/"
               class="ml-3 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
               title="View my services"
             >Why Hire Me?</g-link>
 
             <g-link
-              to="/posts"
+              to="/posts/"
               class="ml-3 md:ml-7 tracking-wide text-base text-grey-darker hover:text-black"
               title="View all posts"
             >Posts</g-link>
             <g-link
-              to="/contact"
+              to="/contact/"
               class="ml-3 md:ml-7 tracking-wide text-base text-site hover:text-site-darker"
               title="Contact Me"
             >Get In Touch</g-link>
@@ -57,7 +57,7 @@
 
             <p class="text-white">
               <g-link
-                to="/contact"
+                to="/contact/"
                 class="btn btn"
                 title="Get in touch with Jack about Freelance"
               >Get In Touch &rarr;</g-link>
@@ -67,24 +67,25 @@
           <div class="column w-12/12 md:w-3/12 flex flex-col">
             <nav>
               <g-link
-                to="/works"
+                to="/works/"
                 class="block mb-2 tracking-wide text-base text-grey"
                 title="View all works"
               >Works</g-link>
 
               <g-link
-                to="/services"
+                to="/services/"
                 class="block mb-2 tracking-wide text-base text-grey"
                 title="View my services"
               >Why Hire Me?</g-link>
 
               <g-link
-                to="/posts"
+                to="/posts/"
                 class="block mb-2 tracking-wide text-base text-grey"
                 title="View all posts"
               >Posts</g-link>
+
               <g-link
-                to="/contact"
+                to="/contact/"
                 class="block mb-2 tracking-wide text-base text-grey"
                 title="Contact Me"
               >Get In Touch</g-link>

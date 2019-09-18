@@ -8,7 +8,7 @@
 
     <p class="text-white">
       <g-link
-        to="/contact"
+        to="/contact/"
         class="btn"
         title="Get in tocuh with Jack about Freelance "
       >Get In Touch &rarr;</g-link>

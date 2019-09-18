@@ -5,7 +5,7 @@
       <p>Sorry, that page cannot be found.</p>
       <p>
         <g-link to="/" class="btn mr-5">Home</g-link>
-        <g-link to="/services" class="btn">See What I Do</g-link>
+        <g-link to="/services/" class="btn">See What I Do</g-link>
       </p>
     </slide-in>
   </Layout>

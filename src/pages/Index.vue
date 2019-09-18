@@ -20,7 +20,7 @@
 
           <p>
             <g-link
-              to="/contact"
+              to="/contact/"
               class="btn btn--small"
               title="Email Jack about Freelance"
             >I'm currently available for new projects &rarr;</g-link>
@@ -56,7 +56,7 @@
         </div>
 
         <div class="text-center">
-          <g-link to="/works" class="btn">View More Works</g-link>
+          <g-link to="/works/" class="btn">View More Works</g-link>
         </div>
       </div>
     </section>

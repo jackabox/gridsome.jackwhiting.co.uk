@@ -1,48 +1,44 @@
 ---
-title: 'Using Firebase Admin SDK with Netlify Lambda.'
+title: Using Firebase Admin SDK with Netlify Lambda.
 slug: using-firebase-admin-sdk-with-netlify-lambda
-date: 2019-10-11 14:00:00 +0000
+date: 2019-10-11T14:00:00.000+00:00
 description: this will be a description
 tags:
 - firebase
 - lambda
+
 ---
+I'm a huge fan of Netlify and I've been recently leaning into spinning up applications with Nuxt, Firebase, and Netlify. However, I've always had the odd thing I've needed to spin a server up for that feels a waste, such as sending mail, taking stripe payments, etc.
 
-I'm a huge fan of Netlify and I've been recently leaning into spinning up applications with Nuxt, Firebase and Netlify. However, I've always had the odd thing I've needed to spin a server up for that feels a waste, such as sending mail, taking stripe payments, etc.
+I use Netlify Lambda functions because my use case doesn't justify the $25 fee for the upgrade to Firebase quite yet (as Firebase blocks external requests until you are on one paid plan). Netlify doesn't block outbound requests on the free plan, and for my use case, it is quite generous.
 
-I use Netlify Lambda functions because my use case doesn't justify the $25 fee for the upgrade to Firebase quite yet (as Firebase blocks external requests until you are on one paid plan). Netlify doesn't block outbound requests on the free plan, and for my use case, is quite generous.
-
-First things first, let's setup what we need to get started with Firebase Admin SDK and Netlify Lambda.
+First things first, let's set up what we need to get started with Firebase Admin SDK and Netlify Lambda.
 
 Project Structure
 
-```
-.config
-functions
-	test
-		test.js
-		package.json
-.gitignore
-netlify.toml
-package.json
-```
+    .config
+    functions
+    	test
+    		test.js
+    		package.json
+    .gitignore
+    netlify.toml
+    package.json
 
 ## Create a Function
 
-To keep things seperate and contained to each function, we're going to build our functions whilst utilising a seperate seperate `package.json` per each file. This may seem a little cumbersome if you have multiple functions but I believe a seperation to be a better practise in keeping the code relative to each element.
+To keep things separate and contained to each function, we're going to build our functions whilst utilizing a separate `package.json` per each file. This may seem a little cumbersome if you have multiple functions but I believe a separation to be a better practice in keeping the code relative to each element.
 
 #### Setup
 
-```
-mkdir functions
-mkdir functions/test
-touch functions/test/package.json
-touch functions/test/test.js
-
-# Add firebase admin
-cd functions/test
-yarn add firebase-admin
-```
+    mkdir functions
+    mkdir functions/test
+    touch functions/test/package.json
+    touch functions/test/test.js
+    
+    # Add firebase admin
+    cd functions/test
+    yarn add firebase-admin
 
 Example package.json
 
@@ -59,10 +55,9 @@ Example package.json
     "firebase-admin": "^8.6.0"
   }
 }
-
 ```
 
-#### Firebase Admin Authentiation
+#### Firebase Admin Authentication
 
 Before we can actually use the Firebase Admin SDK we'll need to generate the authentication file which allows for us to authenticate our request
 
@@ -74,7 +69,7 @@ Before we can actually use the Firebase Admin SDK we'll need to generate the aut
 
 #### Writing an Example Script
 
-The following code below is a quick code which will add a new record with a randomly generated ID to a collection. 
+The following code below is a quick code that will add a new record with a randomly generated ID to a collection.
 
 ```js
 const admin = require('firebase-admin')
@@ -99,16 +94,13 @@ exports.handler = async (event, context, callback) => {
     })
   })
 }
-
 ```
 
 Don't forget to update the "YOUR_COLLECTION_NAME" and "YOUR-APP-URL" placeholders in the file.
 
-
-
 ## Making sure things work when deployed
 
-When we deploy the code the Netlify it will currently have no idea that any of this exists and therefore we'll ned to create a `netlify.toml` file to tell Netlify what to do with out directory. 
+When we deploy the code the Netlify it will currently have no idea that any of this exists and therefore we'll need to create a `netlify.toml` file to tell Netlify what to do without directory.
 
 ```toml
 [build]
@@ -116,9 +108,9 @@ command = "yarn functions"
 functions = "functions"
 ```
 
-The above tells Netlify that the `functions` folder contains all of our functions and that we want to run the `yarn functions` command on initial deploy, which we will set up now. 
+The above tells Netlify that the `functions` folder contains all of our functions and that we want to run the `yarn functions` command on initial deploy, which we will set up now.
 
-In our root directory, create or edit your `package.json` file with following information.
+In our root directory, create or edit your `package.json` file with the following information.
 
 ```json
 {
@@ -129,21 +121,16 @@ In our root directory, create or edit your `package.json` file with following in
     "functions": "cd functions/test && yarn install"
   }
 }
-
 ```
 
 Firstly, this tells Netlify we'll be using Lambda. Secondly, since we have opted for putting a package.json in each function separately, we'll need to make sure it installs everything and the `node_modules` directory exists on the server. The `functions` script does this for our example. It'll `cd` into the directory and install everything required before Netlify pushing it to the Lambda stack.
 
-#### Environment Variables
+\#### Environment Variables
 
 Firebase Admin SDK requires Node v10 for it to work on Netlify Lambda, to ensure that we are using Node V10+ we need to add an environment variable under our admin panel.
 
-
-
 ## Deploy
-
-
 
 Commit everything to your Git repository and push everything to a Netlify site. If ev
 
-Now.. if you deploy said 
+Now.. if you deploy said

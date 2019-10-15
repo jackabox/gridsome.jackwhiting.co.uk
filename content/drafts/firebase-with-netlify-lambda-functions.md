@@ -136,7 +136,7 @@ Firstly, this tells Netlify we'll be using Lambda. Secondly, since we have opted
 
 #### Environment Variables
 
-Firebase Admin SDK requires Node v10 for it to work on Netlify Lambda, to ensure that we are using Node V10+ we need to add an environement variable under our admin panel.
+Firebase Admin SDK requires Node v10 for it to work on Netlify Lambda, to ensure that we are using Node V10+ we need to add an environment variable under our admin panel.
 
 
 

@@ -26,11 +26,11 @@ We're going to use a very barebones project structure for this demo that has no 
 The structure will look a little something like the following:
 
     .config
+    .gitignore
     functions
     	test
     		test.js
     		package.json
-    .gitignore
     netlify.toml
     package.json
 

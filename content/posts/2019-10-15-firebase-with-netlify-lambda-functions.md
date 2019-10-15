@@ -1,8 +1,8 @@
 ---
-title: Using Firebase Admin SDK with Netlify Lambda.
-slug: using-firebase-admin-sdk-with-netlify-lambda
-date: 2019-10-11T14:00:00.000+00:00
-description: this will be a description
+title: Using Firebase Admin SDK with Netlify Lambda Functions
+slug: using-firebase-admin-sdk-with-netlify-lambda-functions
+date: 2019-10-15T14:00:00.000+00:00
+description: "Setting up Netlify Lambda Functions for serverless websites and integrating with Firebase Admin SDK to update the database on request."
 tags:
 - firebase
 - lambda
@@ -181,7 +181,7 @@ exports.handler = async (event, context, callback) => {
 
 ## Deployment Configuration
 
-To make sure everything works when we deploy it to Netlify, we'll need to configure a few things and install a dependancy in our main site directory. In the root folder, if you do not have a `package.json` create one with the following command. If you already have a `package.json` you can ignore this step
+To make sure everything works when we deploy it to Netlify, we'll need to configure a few things and install a dependency in our main site directory. In the root folder, if you do not have a `package.json` create one with the following command. If you already have a `package.json` you can ignore this step
 
 ```bash
 touch package.json

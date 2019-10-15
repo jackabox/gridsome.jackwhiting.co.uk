@@ -14,13 +14,12 @@ Enter Netlify Lambda Functions, on the free plan you're given a generous amount 
 
 The following article covers the following:
 
-1. Setting up the Structure
-2. Integrating Firebase Admin SDK
-3. Configuring your Netlify Deployment
-4. Deploying to Netlify
+1. [Setting up the Structure](#structure)
+2. [Integrating Firebase Admin SDK](#firebase)
+3. [Configuring your Netlify Deployment](#netlify)
+4. [Deploying to Netlify](#deploy)
 
-## Structure
-
+<h2 id="structure">Project Structure</h2>
 We're going to use a very barebones project structure for this demo that has no frontend and only really is used to deploy the functions. These files can easily be transferred into your working directory and the setup would remain the same.
 
 The structure will look a little something like the following:
@@ -70,8 +69,7 @@ Update your package.json with the following:
 
 This is the basic scaffolding you'll need for any function your try and spin up (where you will use npm packages). If you don't plan to use any npm packages, you can not add a package.json.
 
-## Working with Firebase Admin
-
+<h2 id="firebase">Working with Firebase Admin</h2>
 Now for the fun part, getting out function to communicate with the Firebase Admin SDK. The following example will feature a very basic creation of a document to show how everything would work, in your actual function you'll probably take this further.
 
 In our `functions/test` add in the Firebase Admin SDK, like so:
@@ -179,8 +177,7 @@ exports.handler = async (event, context, callback) => {
 }
 ```
 
-## Deployment Configuration
-
+<h2 id="netlify">Netlify Configuration</h2>
 To make sure everything works when we deploy it to Netlify, we'll need to configure a few things and install a dependency in our main site directory. In the root folder, if you do not have a `package.json` create one with the following command. If you already have a `package.json` you can ignore this step
 
 ```bash
@@ -229,8 +226,7 @@ Firebase Admin SDK requires Node v10 for it to work. By default, Netlify Lambda 
 6. Add the following key `AWS_LAMBDA_JS_RUNTIME` with the value `nodejs10.x`
 7. Save
 
-## Deploy Your Function
-
+<h2 id="deploy">Deploy Your Code</h2>
 Commit everything and push the code up to your preferred provider. If you have Netlify set to auto-deploy then everything will be processed and your functions will be created after deployment. You'll be able to see these by going to the **Functions** tab in the **Netlify Console**.
 
 If you click the `test.js` function in the Netlify Console, it will provide you with an endpoint URL which you can visit in your browser to test that everything works and your Firebase DB gets updated.

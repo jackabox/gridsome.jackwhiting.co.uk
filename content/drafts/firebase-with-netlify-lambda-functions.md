@@ -25,40 +25,48 @@ We're going to use a very barebones project structure for this demo that has no 
 
 The structure will look a little something like the following:
 
-    .config
-    .gitignore
-    functions
-    	test
-    		test.js
-    		package.json
-    netlify.toml
+```
+.config
+.gitignore
+functions
+  test
+    test.js
     package.json
+netlify.toml
+package.json
+```
 
 To get started, create a new directory somewhere on your local machine. Inside of the directory we'll need to create a couple of folders.
 
 First, the functions folder which is where any function you wish to run on Netlify will be housed.
 
-     mkdir functions
+```bash
+mkdir functions
+```
 
 Next, let us make a directory for the function, the directory should be named whatever you want the endpoint URL to be accessed from. For this demo, we'll name this **test**. We'll also require two files, a JavaScript file named the same as the folder (which will be what Netlify tries to access) and a package.json to keep all of our requirements contained.
 
 Create the folder and files like so:
 
-    mkdir functions/test
-    cd functions/test
-    touch package.json
-    touch test.js
+```bash
+mkdir functions/test
+cd functions/test
+touch package.json
+touch test.js
+```
 
 Update your package.json with the following:
 
-    {
-      "name": "functions",
-      "version": "1.0.0",
-      "description": "",
-      "main": "test.js",
-      "scripts": {},
-      "author": ""
-    }
+```json
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {},
+  "author": ""
+}
+```
 
 This is the basic scaffolding you'll need for any function your try and spin up (where you will use npm packages). If you don't plan to use any npm packages, you can not add a package.json.
 
@@ -68,7 +76,9 @@ Now for the fun part, getting out function to communicate with the Firebase Admi
 
 In our `functions/test` add in the Firebase Admin SDK, like so:
 
-    yarn add firebase-admin
+```bash
+yarn add firebase-admin
+```
 
 Which should add the following to your `package.json`
 
@@ -80,7 +90,9 @@ Which should add the following to your `package.json`
 
 We can then call this in our `test.js` file by declaring it at the top of the document
 
-    const admin = require('firebase-admin')
+```js
+const admin = require('firebase-admin')
+```
 
 #### Firebase Admin Authentication
 
@@ -104,14 +116,16 @@ To bring everything together and integrate the Firebase Admin SDK with our scrip
 
 Firstly, we need to configure the script to authenticate the Admin SDK with our firebase credentials. To do this update our `test.js` file with the following:
 
-    const admin = require('firebase-admin')
-    const serviceAccount = require('./serviceAccountKey.json') // Update this to your file
+```js
+const admin = require('firebase-admin')
+const serviceAccount = require('./serviceAccountKey.json') // Update this to your file
     
-    // Initialise the admin with the credentials
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-      databaseURL: 'https://<YOUR-APP-URL>.firebaseio.com'
-    })
+// Initialise the admin with the credentials
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://<YOUR-APP-URL>.firebaseio.com'
+})
+```
 
 Update `<YOUR-APP-URL>` with the actual URL of your app. If you don't know this it can be seen in the Firebase Console.
 
@@ -140,40 +154,46 @@ exports.handler = async (event, context, callback) => {
 
 Don't forget to update the `COLLECTION` placeholder with the name of the collection you want to add a record to, if you are purely testing you can just use `test` here. The full code will look a little like this:
 
-    const admin = require('firebase-admin')
-    const serviceAccount = require('./serviceAccountKey.json')
-    
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-      databaseURL: 'https://<YOUR-APP-URL>.firebaseio.com'
+```js
+const admin = require('firebase-admin')
+const serviceAccount = require('./serviceAccountKey.json')
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://<YOUR-APP-URL>.firebaseio.com'
+})
+
+const db = admin.firestore()
+
+exports.handler = async (event, context, callback) => {
+  await db.collection('COLLECTION').add({
+    name: 'Test'
+  })
+
+  return callback(null, {
+    statusCode: 200,
+    body: JSON.stringify({
+      data: `Test data added successfully`
     })
-    
-    const db = admin.firestore()
-    
-    exports.handler = async (event, context, callback) => {
-      await db.collection('COLLECTION').add({
-        name: 'Test'
-      })
-    
-      return callback(null, {
-        statusCode: 200,
-        body: JSON.stringify({
-          data: `Test data added successfully`
-        })
-      })
-    }
+  })
+}
+```
 
 ## Deployment Configuration
 
 To make sure everything works when we deploy it to Netlify, we'll need to configure a few things and install a dependancy in our main site directory. In the root folder, if you do not have a `package.json` create one with the following command. If you already have a `package.json` you can ignore this step
 
-    touch package.json
+```bash
+touch package.json
+```
 
 Netlify requires that your run `npm install` or `yarn install` for each function we create, this is due to the way we've set up the files to keep things contained within each folder. To do this we can create a simple script in our `package.json` and tell Netlify to use it when we deploy. Update your package.json with the following:
 
-      "scripts": {
-        "functions": "cd functions/test && yarn install"
-      }
+```json
+"scripts": {
+  "functions": "cd functions/test && yarn install"
+}
+```
 
 Note, this will `cd` into the `functions/test` folder, we created and then run `yarn install` to download all our dependencies (in this case just Firebase Admin SDK).
 
@@ -181,7 +201,9 @@ Note, this will `cd` into the `functions/test` folder, we created and then run `
 
 To tell Netlify to run the command, we'll need to create or update a `netlify.toml` file. Create a new file in the root directory with the following:
 
-    touch netlify.toml
+```bash
+touch netlify.toml
+```
 
 Inside the file add the following.
 

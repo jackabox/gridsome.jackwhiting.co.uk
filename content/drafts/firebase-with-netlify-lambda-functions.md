@@ -131,11 +131,52 @@ exports.handler = async (event, context, callback) => {
 }
 ```
 
-Don't forget to update the `COLLECTION` placeholder with the name of the collection you want to add a record to, if you are purely testing you can just use `test` here.
+Don't forget to update the `COLLECTION` placeholder with the name of the collection you want to add a record to, if you are purely testing you can just use `test` here. The full code will look a little like this:
+
+    const admin = require('firebase-admin')
+    const serviceAccount = require('./serviceAccountKey.json')
+    
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+      databaseURL: 'https://<YOUR-APP-URL>.firebaseio.com'
+    })
+    
+    const db = admin.firestore()
+    
+    exports.handler = async (event, context, callback) => {
+      await db.collection('COLLECTION').add({
+        name: 'Test'
+      })
+    
+      return callback(null, {
+        statusCode: 200,
+        body: JSON.stringify({
+          data: `Test data added successfully`
+        })
+      })
+    }
 
 ## 3. Deployment Configuration
 
-When we deploy the code the Netlify it will currently have no idea that any of this exists and therefore we'll need to create a `netlify.toml` file to tell Netlify what to do without directory.
+To make sure everything works when we deploy it to Netlify, we'll need to configure a few things and install a dependancy in our main site directory. In the root folder, if you do not have a `package.json` create one with the following command. If you already have a `package.json` you can ignore this step
+
+    touch package.json
+
+Netlify requires that your run `npm install` or `yarn install` for each function we create, this is due to the way we've set up the files to keep things contained within each folder. To do this we can create a simple script in our `package.json` and tell Netlify to use it when we deploy. Update your package.json with the following:
+
+      "scripts": {
+        "functions": "cd functions/test && yarn install"
+      }
+
+Note, this will `cd` into the `functions/test` folder, we created and then run `yarn install` to download all our dependencies (in this case just Firebase Admin SDK).
+
+#### Netlify Configuration
+
+To tell Netlify to run the command, we'll need to create or update a `netlify.toml` file. Create a new file in the root directory with the following:
+
+    touch netlify.toml
+
+Inside the file add the following.
 
 ```toml
 [build]
@@ -143,26 +184,21 @@ command = "yarn functions"
 functions = "functions"
 ```
 
-The above tells Netlify that the `functions` folder contains all of our functions and that we want to run the `yarn functions` command on initial deploy, which we will set up now.
+This will tell Netlify that the `functions` folder contains all of our functions we have set up (in this case just the **test**) and that we want to run the `yarn functions` command on initial deploy which will download all the assets.
 
-In our root directory, create or edit your `package.json` file with the following information.
+If you have existing code in your repository, such as a react app, you may need to take a look at [Concurrently](https://www.npmjs.com/package/concurrently "Concurrently NPM") which will allow you to run multiple commands.
 
-```json
-{
-  "dependencies": {
-    "netlify-lambda": "^1.6.3"
-  },
-  "scripts": {
-    "functions": "cd functions/test && yarn install"
-  }
-}
-```
+#### Node Environment
 
-Firstly, this tells Netlify we'll be using Lambda. Secondly, since we have opted for putting a package.json in each function separately, we'll need to make sure it installs everything and the `node_modules` directory exists on the server. The `functions` script does this for our example. It'll `cd` into the directory and install everything required before Netlify pushing it to the Lambda stack.
+Firebase Admin SDK requires Node v10 for it to work. By default, Netlify Lambda runs in Node v8 so we'll need to add an environment file that tells Netlify to use v10 on the Lambda instance instead. To set the variable, you'll need to do the following:
 
-#### Environment Variables
-
-Firebase Admin SDK requires Node v10 for it to work on Netlify Lambda, to ensure that we are using Node V10+ we need to add an environment variable under our admin panel.
+1. Log in to the [Netlify Console](https://app.netlify.com/ "netlify"). Click into (or create) the site you want.
+2. Click into the **Settings** tab.
+3. Click **Build & Deploy** in the sidebar.
+4. Click **Environment** under the **Build & Deploy** tab.
+5. Click **Edit variables.**
+6. Add the following key `AWS_LAMBDA_JS_RUNTIME` with the value `nodejs10.x`
+7. Save
 
 ## Deploy
 

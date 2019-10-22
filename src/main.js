@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import '~/assets/css/main.css'
 
-export default function(Vue, { router, head }) {
+export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
@@ -21,10 +21,16 @@ export default function(Vue, { router, head }) {
     class: 'flex min-h-screen text-black text-base leading-normal font-sans'
   }
 
-  router.afterEach((to, from) => {
-    /*
-     ** We tell Google Analytics to add a `pageview`
-     */
-    // ga('set', 'page', to.fullPath)
-  })
+  if (isClient) {
+    head.script.push({
+      id: 'fathom-script',
+      async: true,
+      src: '//cdn.usefathom.com/tracker.js'
+    })
+
+    router.afterEach((to, from) => {
+      fathom('set', 'siteId', 'TDSGRITB')
+      fathom('trackPageview')
+    })
+  }
 }

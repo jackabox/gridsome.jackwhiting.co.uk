@@ -25,7 +25,7 @@
     </header>
 
     <div class="h-full">
-      <slot/>
+      <slot />
     </div>
 
     <footer class="container">

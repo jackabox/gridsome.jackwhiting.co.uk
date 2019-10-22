@@ -2,7 +2,7 @@
 
 @import 'tailwindcss/components';
 
-@import 'prism';
+@import 'code';
 
 @import 'grid';
 @import 'typography';

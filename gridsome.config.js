@@ -15,10 +15,7 @@ module.exports = {
       options: {
         path: 'content/posts/*.md',
         typeName: 'Post',
-        route: 'posts/:slug',
-        remark: {
-          plugins: ['@gridsome/remark-prismjs']
-        }
+        route: 'posts/:slug'
       }
     },
     {
@@ -27,12 +24,6 @@ module.exports = {
         path: 'content/works/*.md',
         typeName: 'Work',
         route: '/works/:slug'
-      }
-    },
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: 'UA-86105963-1'
       }
     },
     {
@@ -46,8 +37,8 @@ module.exports = {
         ],
         defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
         whitelist: ['pre', 'code', 'a', 'html', 'body', 'markdown'],
-        whitelistPatterns: [/^language/],
-        whitelistPatternsChildren: [/^language/]
+        whitelistPatterns: [/^shiki/],
+        whitelistPatternsChildren: [/^shiki/]
       }
     },
     {
@@ -92,7 +83,9 @@ module.exports = {
 
   transformers: {
     remark: {
-      plugins: ['@gridsome/remark-prismjs']
+      plugins: [['gridsome-plugin-remark-shiki', { theme: 'nord' }]],
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
     }
   },
 

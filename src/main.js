@@ -20,4 +20,10 @@ export default function(Vue, { router, head, isClient }) {
     ...head.bodyAttrs,
     class: 'flex min-h-screen text-black text-base leading-normal'
   }
+
+  router.afterEach((to, from) => {
+    if (isClient && process.env.NODE_ENV === 'production') {
+      fathom('trackPageview')
+    }
+  })
 }

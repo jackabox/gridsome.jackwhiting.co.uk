@@ -17,7 +17,7 @@ module.exports = {
         typeName: 'Post',
         route: 'posts/:slug',
         remark: {
-          plugins: ['@gridsome/remark-prismjs']
+          plugins: [['gridsome-plugin-remark-shiki', { theme: 'nord' }]]
         }
       }
     },
@@ -27,12 +27,6 @@ module.exports = {
         path: 'content/works/*.md',
         typeName: 'Work',
         route: '/works/:slug'
-      }
-    },
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: 'UA-86105963-1'
       }
     },
     {

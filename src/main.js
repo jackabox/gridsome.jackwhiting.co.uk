@@ -18,7 +18,7 @@ export default function(Vue, { router, head, isClient }) {
 
   head.bodyAttrs = {
     ...head.bodyAttrs,
-    class: 'flex min-h-screen text-black text-base leading-normal font-sans'
+    class: 'flex min-h-screen text-black text-base leading-normal'
   }
 
   if (isClient) {

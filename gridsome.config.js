@@ -6,7 +6,8 @@
 
 module.exports = {
   siteName: 'Jack',
-  titleTemplate: `%s - Jack`,
+  siteUrl: 'https://jackwhiting.co.uk',
+  titleTemplate: `%s Jack Whiting | Freelance Web Developer in Nottingham`,
 
   plugins: [
     {
@@ -14,7 +15,7 @@ module.exports = {
       options: {
         path: 'content/posts/*.md',
         typeName: 'Post',
-        route: '/posts/:slug',
+        route: 'posts/:slug',
         remark: {
           plugins: ['@gridsome/remark-prismjs']
         }
@@ -37,7 +38,54 @@ module.exports = {
     {
       use: 'gridsome-plugin-purgecss',
       options: {
-        whitelist: ['pre', 'code', 'a', 'html', 'body', 'markdown']
+        content: [
+          './src/**/*.vue',
+          './src/**/*.html',
+          './src/**/*.js',
+          './src/**/*.md'
+        ],
+        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+        whitelist: ['pre', 'code', 'a', 'html', 'body', 'markdown'],
+        whitelistPatterns: [/^language/],
+        whitelistPatternsChildren: [/^language/]
+      }
+    },
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: ['Post'],
+        feedOptions: {
+          title: 'Jack Whiting - Posts',
+          feed_url: 'https://jackwhiting.co.uk/rss.xml',
+          site_url: 'https://jackwhiting.co.uk'
+        },
+        latest: true,
+        feedItemOptions: node => ({
+          title: node.title,
+          date: node.date,
+          description: node.description,
+          url: 'https://jackwhiting.co.uk/posts/' + node.slug
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000,
+        config: {
+          '/posts/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/works': {
+            changefreq: 'monthly',
+            priority: 0.7
+          }
+        }
       }
     }
   ],
@@ -69,6 +117,10 @@ module.exports = {
 
         return options
       })
+
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader')
   }
 }
 

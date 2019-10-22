@@ -12,5 +12,4 @@
 .article {
   width: 100%;
   max-width: config('screens.md');
-  margin: 0 auto;
 }

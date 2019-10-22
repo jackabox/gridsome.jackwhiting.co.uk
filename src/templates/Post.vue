@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <page-header :title="$page.post.title" :date="$page.post.date"/>
+    <page-header :title="$page.post.title" :date="$page.post.date" />
 
-    <div class="mb-20">
-      <slide-in :reverse="true" :delay="200" class="container article">
-        <div class="content" v-html="$page.post.content"/>
+    <div class="container">
+      <slide-in :reverse="true" :delay="200" class="article">
+        <div class="mb-10 lg:mb-20 content" v-html="$page.post.content" />
       </slide-in>
     </div>
   </Layout>
@@ -22,7 +22,7 @@ export default {
 
   metaInfo() {
     return {
-      title: this.$page.post.title,
+      title: this.$page.post.title + ' |',
       meta: [
         { name: 'author', content: 'Jack Whiting' },
         {

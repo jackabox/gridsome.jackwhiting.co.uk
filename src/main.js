@@ -20,17 +20,4 @@ export default function(Vue, { router, head, isClient }) {
     ...head.bodyAttrs,
     class: 'flex min-h-screen text-black text-base leading-normal'
   }
-
-  if (isClient) {
-    head.script.push({
-      id: 'fathom-script',
-      async: true,
-      src: '//cdn.usefathom.com/tracker.js'
-    })
-
-    router.afterEach((to, from) => {
-      fathom('set', 'siteId', 'TDSGRITB')
-      fathom('trackPageview')
-    })
-  }
 }

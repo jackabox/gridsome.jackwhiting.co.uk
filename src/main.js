@@ -22,7 +22,10 @@ export default function(Vue, { router, head, isClient }) {
   }
 
   router.afterEach((to, from) => {
+    console.log('before testing page view')
+
     if (isClient && process.env.NODE_ENV === 'production') {
+      console.log('testing page view')
       fathom('trackPageview')
     }
   })

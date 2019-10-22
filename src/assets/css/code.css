@@ -1,0 +1,16 @@
+.shiki {
+  border-radius: 3px;
+  font-size: 90%;
+  line-height: 1.5;
+  overflow: auto;
+  padding: 16px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.shiki-inline {
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 0 6px;
+  display: inline-block;
+}

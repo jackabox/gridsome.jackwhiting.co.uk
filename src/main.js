@@ -22,7 +22,11 @@ export default function(Vue, { router, head, isClient }) {
   }
 
   router.afterEach((to, from) => {
-    if (isClient && process.env.NODE_ENV === 'production') {
+    if (
+      isClient &&
+      process.env.NODE_ENV === 'production' &&
+      window.location.hostname != 'master--jackwhiting.netlify.com'
+    ) {
       fathom('trackPageview')
     }
   })

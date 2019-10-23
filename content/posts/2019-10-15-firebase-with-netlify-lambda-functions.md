@@ -20,6 +20,7 @@ The following article covers the following:
 4. [Deploying to Netlify](#deploy)
 
 <h2 id="structure">Project Structure</h2>
+
 We're going to use a very barebones project structure for this demo that has no frontend and only really is used to deploy the functions. These files can easily be transferred into your working directory and the setup would remain the same.
 
 The structure will look a little something like the following:

@@ -16,7 +16,7 @@
       <a
         :href="link"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         :title="'Link to website for ' + title"
         class="block mt-2"
       >
@@ -29,7 +29,7 @@
         <a
           :href="link"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="link text-base inline-block"
           :title="'Link to website for ' + title"
         >Visit Site &rarr;</a>

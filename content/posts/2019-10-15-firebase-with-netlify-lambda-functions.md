@@ -2,12 +2,12 @@
 title: Using Firebase Admin SDK with Netlify Lambda Functions
 slug: using-firebase-admin-sdk-with-netlify-lambda-functions
 date: 2019-10-15T14:00:00.000+00:00
-description: "Setting up Netlify Lambda Functions for serverless websites and integrating with Firebase Admin SDK to update the database on request."
+description: 'Setting up Netlify Lambda Functions for serverless websites and integrating with Firebase Admin SDK to update the database on request.'
 tags:
-- firebase
-- lambda
-
+  - firebase
+  - lambda
 ---
+
 I've been recently leaning into spinning up applications with Nuxt and Firebase. These are pretty straight forward applications that handle user authentication and creating/reading of data. However, I've recently come into a case where I needed to send out a request to a third party service and write that back to the database. You could do this within Firebase Functions, but it would require you to be signed up onto one of the paid plans - which I'm not quite ready for yet.
 
 Enter Netlify Lambda Functions, on the free plan you're given a generous amount of resources and it allows you to send requests to third parties. This article is designed to run through a very basic setup of a Netlify Function and how to communicate with Firebase.
@@ -98,7 +98,7 @@ To actually connect to Firebase we'll need to authenticate the account, this wil
 
 To generate the authentication file, follow these steps:
 
-1. Log in to the Google Console at [https://console.firebase.google.com](https://console.firebase.google.com "https://console.firebase.google.com")
+1. Log in to the Google Console at [https://console.firebase.google.com](https://console.firebase.google.com 'https://console.firebase.google.com')
 2. Click into the project you want to use the Admin SDK with, or create a new project.
 3. Head to the project settings.
 4. Click the "**Service Accounts**" tab.
@@ -117,7 +117,7 @@ Firstly, we need to configure the script to authenticate the Admin SDK with our 
 ```js
 const admin = require('firebase-admin')
 const serviceAccount = require('./serviceAccountKey.json') // Update this to your file
-    
+
 // Initialise the admin with the credentials
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -212,13 +212,13 @@ functions = "functions"
 
 This will tell Netlify that the `functions` folder contains all of our functions we have set up (in this case just the **test**) and that we want to run the `yarn functions` command on initial deploy which will download all the assets.
 
-If you have existing code in your repository, such as a react app, you may need to take a look at [Concurrently](https://www.npmjs.com/package/concurrently "Concurrently NPM") which will allow you to run multiple commands.
+If you have existing code in your repository, such as a react app, you may need to take a look at [Concurrently](https://www.npmjs.com/package/concurrently 'Concurrently NPM') which will allow you to run multiple commands.
 
 #### Node Environment
 
 Firebase Admin SDK requires Node v10 for it to work. By default, Netlify Lambda runs in Node v8 so we'll need to add an environment file that tells Netlify to use v10 on the Lambda instance instead. To set the variable, you'll need to do the following:
 
-1. Log in to the [Netlify Console](https://app.netlify.com/ "netlify"). Click into (or create) the site you want.
+1. Log in to the [Netlify Console](https://app.netlify.com/ 'netlify'). Click into (or create) the site you want.
 2. Click into the **Settings** tab.
 3. Click **Build & Deploy** in the sidebar.
 4. Click **Environment** under the **Build & Deploy** tab.

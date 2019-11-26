@@ -41,7 +41,13 @@ export default {
           href: 'https://jackwhiting.co.uk/posts/' + this.$page.post.slug
         }
       ],
-      script: [{ src: 'https://cdn.commento.io/js/commento.js', defer: true }]
+      script: [
+        {
+          src: 'https://cdn.commento.io/js/commento.js',
+          defer: true,
+          'data-no-fonts': true
+        }
+      ]
     }
   }
 }

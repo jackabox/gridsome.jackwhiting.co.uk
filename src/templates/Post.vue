@@ -6,6 +6,10 @@
       <slide-in :reverse="true" :delay="200" class="article">
         <div class="mb-10 lg:mb-20 content" v-html="$page.post.content" />
       </slide-in>
+
+      <slide-in :reverse="true" :delay="500">
+        <div id="commento"></div>
+      </slide-in>
     </div>
   </Layout>
 </template>
@@ -36,7 +40,8 @@ export default {
           rel: 'canonical',
           href: 'https://jackwhiting.co.uk/posts/' + this.$page.post.slug
         }
-      ]
+      ],
+      script: [{ src: 'https://cdn.commento.io/js/commento.js', defer: true }]
     }
   }
 }

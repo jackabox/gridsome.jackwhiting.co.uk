@@ -7,7 +7,7 @@
         <div class="mb-10 lg:mb-20 content" v-html="$page.post.content" />
       </slide-in>
 
-      <slide-in :reverse="true" :delay="500">
+      <slide-in :reverse="true" :delay="500" class="article">
         <div id="commento"></div>
       </slide-in>
     </div>

@@ -111,6 +111,7 @@ import sveltePreprocess from 'svelte-preprocess'
 Then modify the section which looks similar to the following
 
 ```js
+
 ...
 svelte({
   ...

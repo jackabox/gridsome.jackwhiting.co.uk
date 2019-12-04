@@ -1,5 +1,5 @@
 ---
-title: 'Setting up Svelte & Integrating Tailwind CSS'
+title: 'Getting Started With Svelte: Installation & Integrating Tailwind CSS'
 slug: setting-up-svelte-and-integrating-tailwind-css
 date: 2019-12-04 01:38:00
 description: 'Part one of my getting start with Svelte series. In this part we will touch on how to setup Svelte and integrating Tailwind CSS'
@@ -65,7 +65,7 @@ module.exports = {
 
 ### Creating our PostCSS Rules
 
-We will need to tell Svelte how to interprit and compile our necessary code. We can do this by creating a `postcss.config.js` file in the route directory. Manually create one or run the following in the terminal.
+We will need to tell Svelte how to interpret and compile our necessary code. We can do this by creating a `postcss.config.js` file in the route directory. Manually create one or run the following in the terminal.
 
 ```bash
 touch postcss.config.js
@@ -88,9 +88,9 @@ module.exports = {
 }
 ```
 
-To explain the above a little, we first create a ruleset for Purge CSS which will look through all Svelte and HTML files and remove any classes that do not match what are included. We'll also add a whitelist pattern to ensure that any Svelte generated classes are not removed unnecessarily.
+To explain the above a little, we first create a ruleset for Purge CSS which will look through all Svelte and HTML files and remove any classes that do not match what is included. We'll also add a whitelist pattern to ensure that any Svelte generated classes are not removed unnecessarily.
 
-We then watch on wether the `process.env.ROLLUP_WATCH` equates to true, if not, we purge, if true then we are in development and we just compile the Tailwind classes.
+We then watch on whether the `process.env.ROLLUP_WATCH` equates to true, if not, we purge, if true then we are in development and we just compile the Tailwind classes.
 
 ### Integrating with Svelte
 

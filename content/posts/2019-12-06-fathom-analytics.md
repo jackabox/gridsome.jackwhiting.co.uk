@@ -16,7 +16,7 @@ I have been using [Fathom Analytics](https://usefathom.com/ref/ULVWJ1) since the
 [Fathom Analytics](https://usefathom.com/ref/ULVWJ1) is a completely privacy-focused solution to website analytics. It does not track personal information and keeps the interface looking slick with one page to display all of your metrics - such as referrers, screen sizes, bounce rate, duration and more. It offers everything I need from analytics software and all wrapped up into a beautiful interface.
 
 <p><a href="/img/fathom-screenshot.jpg" title="Fathom Analytics Screenshot" target="_blank">
-	<img src="/img/fathom-screenshot.jpg" alt="Fathom Analytics Screenshot">
+	<img src="/img/fathom-screenshot.jpg" alt="Fathom Analytics Screenshot" class="w-full h-auto">
 </a></p>
 
 The version 2 launch of [Fathom](https://usefathom.com/ref/ULVWJ1) involved a complete rewrite from the ground up, moving away from Go to a system built with Laravel and Ember. The team behind the launch ([@JackEllis](https://twitter.com/JackEllis) and [@pjrvs](https://twitter.com/pjrvs)) absolutely nailed it and as such the word has been flying around.

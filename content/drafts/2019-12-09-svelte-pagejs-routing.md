@@ -1,5 +1,6 @@
 ---
-title: Setting up Routing with Svelte & Page.js
+title: Setting up Routing In Svelte with Page.js
+slug: 'setting-up-routing-in-svelte-with-pagejs'
 summary: 'Part of a series of Working with Svelte, in this article we are looking at how to set up routing within a Svelte application by leveraging Page.js'
 date: 2019-12-10T16:00:00
 categories:
@@ -12,15 +13,16 @@ series:
 
 This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:
 
-1. [Setting up Svelte & Installing Tailwind]()
+1. [Setting up Svelte & Installing Tailwind (and PostCSS)](https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/)
 2. Setting up Routing with Page.js (this article)
 3. Optimising Our Router For Large Applications (Coming Soon)
+4. _More posts announced soon_
 
 ---
 
 In the last article we briefly looked at spinning up Svelte. This article doesn't require you to have done this but if you don't have a Svelte installation I really advise following the [quick start guide](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte website.
 
-There are several ways we can look at routing in Svelte, the first choice may be Sapper (which is in beta at the point of writing this post) which is a mini-framework built by the Svelte team. There are also a couple of libraries around which you can use to integrate routing such as **[svelte-routing](https://github.com/EmilTholin/svelte-routing)** or **[Page.js](https://visionmedia.github.io/page.js/)**. 
+There are several ways we can look at routing in Svelte, the first choice may be [Sapper](https://sapper.svelte.dev/) (which is in beta at the point of writing this post) which is a mini-framework built by the Svelte team. There are also a couple of packages which you can use to integrate routing such as **[svelte-routing](https://github.com/EmilTholin/svelte-routing)** or **[Page.js](https://visionmedia.github.io/page.js/)**. 
 
 For the purpose of routing within our application we are going to be utilising the awesome library [Page.js](https://visionmedia.github.io/page.js/). We have chosen Page.js as it offers a lot of granular control over our individual routes and works off any anchor (`<a>`) links in our site without requiring any custom components. I find this works a lot better as when content is rendered from a WYSIWYG or Markdown files all of the internal anchor links will work flawlessly.
 

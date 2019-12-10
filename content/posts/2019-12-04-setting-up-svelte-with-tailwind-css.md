@@ -96,11 +96,13 @@ We then watch on whether the `process.env.ROLLUP_WATCH` equates to true, if not,
 
 We'll need to include the Tailwind helpers somewhere so that all of the necessary styles can be pulled in. Open up the `App.svelte` file in the `src/` folder, and add the following code to the bottom (replacing any styles that are already there).
 
+```js
 <style global>
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
 </style>
+```
 
 Then we'll need to ensure Svelte runs the preprocessors on any code in our `<style>` tags. To do this, we'll need to open the `rollup.config.js` file in your editor and add the following at the top of the file.
 

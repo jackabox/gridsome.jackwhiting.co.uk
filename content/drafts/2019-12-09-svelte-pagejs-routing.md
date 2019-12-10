@@ -3,13 +3,13 @@
 
 In the last article we briefly looked at spinning up Svelte. This article doesn't require you to have done this but if you don't have a Svelte installation I really advise following the quick start guide on the Svelte website.
 
+There are several ways we can look at routing in Svelte, the first choice may be Sapper (which is in beta at the point of writing this post) which is a mini-framework built by the Svelte team. There are also a couple of libraries you can use such as `svelte-routing` or `Page.js`. 
+
+For this article, we are going to be utilising [Page.js](https://visionmedia.github.io/page.js/). We've chosen Page.js as it offers a lot of granular control over our individual routes and works off any anchor (`<a>`) links in our site without requiring any custom components.
+
 ## Setting Up Our Environment
 
-Before we get into the bulk of writing our router and code we'll need to set up a couple of prerequisites. Firstly, we'll need to install any libraries we are going to use and configure our environment so that everything will work as appropriate.
-
-We are going to use [Page.js](https://visionmedia.github.io/page.js/) for this use case, there are alternatives out there, but I find this can give us a lot of granular control over our individual routes as well as works off any anchor (`<a>`) links in our files, so even if we render content from an API/Markdown any internal links will also be interpreted.
-
-To install Page.js open terminal in your route directory of your site and run the following:
+To start, lets get Page.js installed. Open up your terminal in your root directory of your site and run the following:
 
 ```
 yarn add page # or npm install page

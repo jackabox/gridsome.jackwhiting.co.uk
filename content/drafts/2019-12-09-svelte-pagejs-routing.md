@@ -1,3 +1,13 @@
+---
+title: Setting up Routing with Svelte & Page.js
+summary: 'Part of a series of Working with Svelte, in this article we are looking at how to set up routing within a Svelte application by leveraging Page.js'
+date: 2019-12-10T16:00:00
+categories:
+  - Svelte
+series:
+  - Working with Svelte
+---
+
 # Setting up Routing with Svelte & Page.js
 
 This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:
